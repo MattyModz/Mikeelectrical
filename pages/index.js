@@ -1,8 +1,7 @@
 export default function Home() {
   return (
     <>
-      <div className="container">
-        <h1>Horizontal Scroll</h1>
+      <div className="w-full">
         <div className="track-wrapper">
           <ul className="track">
             <li className="track__item">
