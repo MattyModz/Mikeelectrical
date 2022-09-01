@@ -3,18 +3,7 @@
 @import "~tailwindcss/utilities";
 
 .track-wrapper {
-  width: 100%;
-  max-inline-size: var(--size-content-3);
-  overflow: hidden;
-  -webkit-mask: linear-gradient(
-        90deg,
-        transparent 0,
-        black 15% 85%,
-        transparent
-      )
-      0 50% / 100% calc(100% - (2 * var(--size-4))) no-repeat,
-    linear-gradient(0deg, black, black) 50% 0 / 100% var(--size-4) no-repeat,
-    linear-gradient(0deg, black, black) 50% 100% / 100% var(--size-4) no-repeat;
+  background-color: #f9fafb;
 }
 
 img {
@@ -37,31 +26,38 @@ img {
   /* Circular inverted */
   /* -webkit-mask-image: radial-gradient(ellipse at 50% 66%, black 0 30%, transparent 30%);
 	/* No Scrollbar */
-  /* -webkit-mask: radial-gradient(#0000 0 30%, #000 30%) 50% 20vmin / 240% 100%;*/
-  /* Winner */
-  /*-webkit-mask: radial-gradient(#0000 0 30%, #000 30%) 50% calc(var(--size) * 0.5) / 250% 100%,
-								linear-gradient(0deg, black, black) 50% 0 / 100% var(--size-4) no-repeat,
-								linear-gradient(0deg, black, black) 50% 100% / 100% var(--size-4) no-repeat;*/
-  -webkit-mask: radial-gradient(#0000 0 30%, #000 30.5%) 50%
-      calc(var(--size) * 0.5) / 300% 100%,
-    linear-gradient(0deg, black, black) 50% 0 / 100% var(--size-4) no-repeat,
-    linear-gradient(0deg, black, black) 50% 100% / 100% var(--size-4) no-repeat;
+  // -webkit-mask: radial-gradient(#0000 0 30%, #000 30%) 50% 20vmin / 240% 100%;
+  // /* Winner */
+  // /*-webkit-mask: radial-gradient(#0000 0 30%, #000 30%) 50% calc(var(--size) * 0.5) / 250% 100%,
+  // 							linear-gradient(0deg, black, black) 50% 0 / 100% var(--size-4) no-repeat,
+  // 							linear-gradient(0deg, black, black) 50% 100% / 100% var(--size-4) no-repeat;*/
+  // -webkit-mask: radial-gradient(#0000 0 30%, #000 30.5%) 50%
+  //     calc(var(--size) * 0.5) / 300% 100%,
+  //   linear-gradient(0deg, black, black) 50% 0 / 100% var(--size-4) no-repeat,
+  //   linear-gradient(0deg, black, black) 50% 100% / 100% var(--size-4) no-repeat;
 }
 
 .track__item {
   height: 100%;
   aspect-ratio: 1;
-  background: hsl(0 80% 50% / 1);
+
   /*background: var(--surface-2);*/
   scroll-snap-align: center;
+  padding-left: 1rem;
   /*display: none;*/
 }
 
-h1 {
-  position: fixed;
-  margin: 0;
-  opacity: 0.5;
-  bottom: var(--size-3);
-  right: var(--size-3);
-  font-size: var(--font-size-fluid-1);
+::-webkit-scrollbar {
+  height: 5px; /* height of horizontal scrollbar ← You're missing this */
+  width: 12px; /* width of vertical scrollbar */
+}
+::-webkit-scrollbar-thumb:horizontal {
+  background: #000;
+  border-radius: 10px;
+}
+
+@layer base {
+  body {
+    font-family: "Inter", sans-serif;
+  }
 }

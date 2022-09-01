@@ -6,11 +6,9 @@ module.exports = {
     },
     extend: {
       padding: { "fluid-video": "56.25%" },
-      colors: {
-     
-      },
+      colors: {},
       fontfamily: {
-       
+        "shadows-into-light": ['"Shadows Into Light"'],
       },
 
       screens: {
