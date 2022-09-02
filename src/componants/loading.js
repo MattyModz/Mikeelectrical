@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import React from "react";
 import styles from "../styles/Loading.module.scss";
+import Link from "next/link";
 
 export default function Loading(props) {
   return (
