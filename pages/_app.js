@@ -3,7 +3,7 @@ import { AnimatePresence } from "framer-motion";
 // import Footer from "../src/componants/Footer/footer";
 import Header from "../src/componants/Header/header";
 import { useEffect, useState } from "react";
-import Loading from "../src/componants/Loading";
+import Loading from "../src/componants/loading";
 function MyApp({ Component, pageProps, router }) {
   // useEffect(() => {
   //   setTimeout(() => {
