@@ -9,6 +9,7 @@ function Fold() {
             {" "}
             <Image width={200} height={100} src="/logoicon.svg" alt="" />
           </div>
+          <Image width={150} height={75} src="/logo.svg" alt="" />
 
           <div className="max-w-5xl mx-auto text-center mt-2">
             <h1 className=" text-4xl  leading-tight text-gray-900 sm:text-5xl sm:leading-tight lg:text-6xl lg:leading-tight font-inter ">
@@ -16,8 +17,7 @@ function Fold() {
             </h1>
 
             <p className="max-w-md mx-auto mt-6 text-base leading-7 text-gray-600 ">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vehicula
-              massa in enim luctus. Rutrum arcu.
+              Leading Electrical Engineer Serving The North West
             </p>
 
             <div className="relative inline-flex mt-4 group">

@@ -12,7 +12,7 @@ export default function Nav() {
                 title=""
                 className="flex rounded outline-none focus:ring-1 focus:ring-gray-900 focus:ring-offset-2"
               >
-                <Image width={200} height={100} src="/logo.svg" alt="" />
+                <Image width={150} height={75} src="/logo.svg" alt="" />
               </a>
             </div>
 
