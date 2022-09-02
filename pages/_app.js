@@ -10,7 +10,7 @@ function MyApp({ Component, pageProps, router }) {
   //     setLoading(false);
   //   }, 1000);
   // }, []);
-  const [loading, setLoading] = useState(true);
+  const [setLoading] = useState(true);
   useEffect(() => {
     setTimeout(() => {
       setLoading(false);
