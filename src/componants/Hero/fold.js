@@ -9,7 +9,6 @@ function Fold() {
             {" "}
             <Image width={200} height={100} src="/logoicon.svg" alt="" />
           </div>
-          <Image width={150} height={75} src="/logo.svg" alt="" />
 
           <div className="max-w-5xl mx-auto text-center mt-2">
             <h1 className=" text-4xl  leading-tight text-gray-900 sm:text-5xl sm:leading-tight lg:text-6xl lg:leading-tight font-inter ">
