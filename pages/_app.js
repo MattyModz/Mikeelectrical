@@ -14,14 +14,14 @@ function MyApp({ Component, pageProps, router }) {
   useEffect(() => {
     setTimeout(() => {
       setLoading(false);
-    }, 10);
+    }, 1000);
   }, []);
   return (
     <div>
       <Header />
 
       <AnimatePresence exitBeforeEnter>
-        <Loading loading={Loading} />
+        <Loading loading={loading} />
         <Component {...pageProps} key={router.route} />
       </AnimatePresence>
     </div>

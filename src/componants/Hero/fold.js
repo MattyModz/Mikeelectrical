@@ -11,7 +11,7 @@ function Fold() {
           </div>
 
           <div className="max-w-5xl mx-auto text-center mt-2">
-            <h1 className=" text-4xl  leading-tight text-gray-900 sm:text-5xl sm:leading-tight lg:text-6xl lg:leading-tight font-inter ">
+            <h1 className=" text-4xl leading-tight text-gray-900 sm:text-5xl sm:leading-tight lg:text-6xl lg:leading-tight font-inter ">
               Leading Electrical Engineer Serving The North West
             </h1>
 
