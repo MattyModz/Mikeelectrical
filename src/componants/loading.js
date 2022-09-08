@@ -15,7 +15,7 @@ export default function Loading(props) {
       <div className="w-full h-full bg-logo-pink grid items-center">
         <div className="flex justify-center grid items-center ">
           <Link href="/">
-            <img src="/logo.svg" height={300} width={300} className="pulse" />
+            <img src="/logoicon.svg" height={300} width={300} className="pulse" />
           </Link>
         </div>
       </div>

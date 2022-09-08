@@ -7,25 +7,25 @@ function Carousel() {
         <div className=" bg-gray-50 ">
           <ul className="track bg-gray-50">
             <li className="track__item">
-              <Image src={"/Pictwo.jpg"} width={500} height={500} />
+              <Image src={"/1.png"} width={500} height={500} />
             </li>
             <li className="track__item">
-              <Image src={"/Picone.jpg"} width={500} height={500} />
+              <Image src={"/2.jpeg"} width={500} height={500} />
             </li>
             <li className="track__item">
-              <Image src={"/Pictwo.jpg"} width={500} height={500} />
+              <Image src={"/3.jpeg"} width={500} height={500} />
             </li>
             <li className="track__item">
-              <Image src={"/Picone.jpg"} width={500} height={500} />
+              <Image src={"/4.jpeg"} width={500} height={500} />
             </li>
             <li className="track__item">
-              <Image src={"/Pictwo.jpg"} width={500} height={500} />
+              <Image src={"/5.jpeg"} width={500} height={500} />
             </li>
             <li className="track__item">
-              <Image src={"/Pictwo.jpg"} width={500} height={500} />
+              <Image src={"/6.jpeg"} width={500} height={500} />
             </li>
             <li className="track__item">
-              <Image src={"/Pictwo.jpg"} width={500} height={500} />
+              <Image src={"/7.jpeg"} width={500} height={500} />
             </li>
           </ul>
         </div>
