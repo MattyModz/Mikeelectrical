@@ -2,7 +2,7 @@ import React from "react";
 import Carousel from "./carousel";
 import Fold from "./fold";
 import Contact from "../Contact";
-import Logocloud from "../Logocloud";
+// import Logocloud from "../Logocloud";
 
 function Index() {
   return (
