@@ -7,7 +7,7 @@ function Carousel() {
         <div className=" bg-gray-50 ">
           <ul className="track bg-gray-50">
             <li className="track__item">
-              <Image src={"/1.png"} width={500} height={500} />
+              <Image src={"/1.jpeg"} width={500} height={500} />
             </li>
             <li className="track__item">
               <Image src={"/2.jpeg"} width={500} height={500} />
