@@ -1,5 +1,5 @@
 import { motion, AnimatePresence } from "framer-motion";
-
+import React from "react";
 const info = [
   "Nick Eubank",
   "James Gregory",
