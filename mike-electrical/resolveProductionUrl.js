@@ -13,8 +13,8 @@ export default function resolveProductionUrl(doc) {
     case "post":
       return `${previewUrl}/api/preview?secret=${SANITY_PREVIEW_SECRET}&slug=post/${doc.slug.current}`;
   }
-  switch (doc._type) {
-    case "policy":
-      return `${previewUrl}/api/preview?secret=${SANITY_PREVIEW_SECRET}&slug=policy/${doc.slug.current}`;
-  }
+  // switch (doc._type) {
+  //   case "policy":
+  //     return `${previewUrl}/api/preview?secret=${SANITY_PREVIEW_SECRET}&slug=policy/${doc.slug.current}`;
+  // }
 }
