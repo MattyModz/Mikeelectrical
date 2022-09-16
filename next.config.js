@@ -8,6 +8,6 @@ module.exports = {
   },
 
   images: {
-    domains: [],
+    domains: ["cdn.sanity.io"],
   },
 };

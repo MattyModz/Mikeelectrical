@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 function Carousel() {
   return (
-    <div className="bg-gray-50">
+    <div className="bg-gray-50 ">
       <div className="w-full  bg-gray-50 ">
         <div className=" bg-gray-50 ">
           <ul className="track bg-gray-50">

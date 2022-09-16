@@ -1,5 +1,5 @@
 import React from "react";
-
+import { Review, Reviews } from "../reviews/Reviewcarousel";
 function Fold() {
   return (
     <>
@@ -76,8 +76,11 @@ function Fold() {
           </div>
         </div>
 
-        <div className="relative pt-6 pb-16 sm:pb-24">
+        <div className="relative  pb-16 sm:pb-24">
           <main className="mx-auto mt-16 max-w-7xl px-4 sm:mt-24">
+            <div>
+              <Review />
+            </div>
             <div className="text-center">
               <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl md:text-6xl">
                 <span className="block xl:inline">

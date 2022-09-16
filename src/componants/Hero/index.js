@@ -10,8 +10,6 @@ function Index() {
       <Fold />
       {/* <Logocloud/> */}
       <Carousel />
-
-      <Contact />
     </>
   );
 }

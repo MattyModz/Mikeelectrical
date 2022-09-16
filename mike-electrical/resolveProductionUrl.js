@@ -1,5 +1,5 @@
 // Any random string, must match SANITY_PREVIEW_SECRET in the Next.js .env.local file
-const SANITY_PREVIEW_SECRET = "JZSLlav7SIse2qG";
+const SANITY_PREVIEW_SECRET = "pYIczywtrU";
 
 // Replace `remoteUrl` with your deployed Next.js site
 const remoteUrl = `https://www.mikewire-electrical.co.uk`;
@@ -13,8 +13,4 @@ export default function resolveProductionUrl(doc) {
     case "post":
       return `${previewUrl}/api/preview?secret=${SANITY_PREVIEW_SECRET}&slug=post/${doc.slug.current}`;
   }
-  // switch (doc._type) {
-  //   case "policy":
-  //     return `${previewUrl}/api/preview?secret=${SANITY_PREVIEW_SECRET}&slug=policy/${doc.slug.current}`;
-  // }
 }
