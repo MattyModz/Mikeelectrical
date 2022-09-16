@@ -42,8 +42,7 @@ function Post({ data, preview }) {
   const post = filterDataToSingleItem(previewData, preview);
 
   return (
-    <section className="bg-red-400">
-      <div className=" border flex justify-center">hello</div>
+    <section className="mb-8 bg-gray-50">
       <div className=" flex justify-center  ">
         <main className="p-5 mx-auto  text-black container max-w-5xl ">
           <article className="container ">
@@ -59,7 +58,7 @@ function Post({ data, preview }) {
                 </h1>
               )}
 
-              <div className="py-2 flex items-center space-x-2 px-4">
+              <div className="py-2 flex items-center space-x-2 px-4 justify-center">
                 {post?.author.image && (
                   <Image
                     className="h-10 w-10 rounded-full"
@@ -69,7 +68,8 @@ function Post({ data, preview }) {
                     height={50}
                   />
                 )}
-                <p className="font-extralight text-sm">
+                <p className="font-extralight text-sm flex justify-center">
+                  {" "}
                   Blog post by{" "}
                   {post?.author.name && (
                     <span className="text-orange-600">{post.author.name}</span>
