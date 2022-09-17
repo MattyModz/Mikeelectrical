@@ -1,5 +1,5 @@
 import React from "react";
-import { Review, Reviews } from "../reviews/Reviewcarousel";
+
 function Fold() {
   return (
     <>
