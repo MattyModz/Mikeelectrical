@@ -2,10 +2,7 @@ import React from "react";
 import Image from "next/image";
 function Footer() {
   return (
-    <div
-      className="box-border px-4 mx-auto border-solid md:px-6 lg:px-8 max-w-7xl tails-selected-element"
-      contenteditable="true"
-    >
+    <div className="box-border px-4 mx-auto border-solid md:px-6 lg:px-8 max-w-7xl tails-selected-element">
       <div className="relative flex flex-col items-center justify-between leading-7 text-gray-900 border-0 border-gray-200 md:flex-row md:items-center">
         <a
           href="#"
@@ -57,11 +54,11 @@ function Footer() {
               className="w-7 h-7"
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
-              stroke-width="1.5"
+              strokeWidth="1.5"
               stroke="currentColor"
               fill="none"
-              stroke-linecap="round"
-              stroke-linejoin="round"
+              strokeLinecap="round"
+              strokeLinejoin="round"
             >
               <path d="M0 0h24v24H0z" stroke="none"></path>
               <path

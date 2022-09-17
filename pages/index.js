@@ -1,6 +1,6 @@
 import React from "react";
 import Index from "../src/componants/Hero";
-import { Review } from "../src/componants/reviews/Reviewcarousel";
+
 import { sanityClient } from "../sanity";
 import Blogcard from "../src/componants/Blog";
 export default function Home({ posts }) {
