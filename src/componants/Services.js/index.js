@@ -6,7 +6,7 @@ import clsx from "clsx";
 import { Container } from "../Container";
 import backgroundImage from "../../../public/background-features.jpg";
 import screenshotExpenses from "../../../public/screenshots/expenses.png";
-import screenshotPayroll from "../../../public/screenshots/payroll.png";
+
 import screenshotReporting from "../../../public/screenshots/reporting.png";
 import screenshotVatReturns from "../../../public/screenshots/vat-returns.png";
 
@@ -84,7 +84,7 @@ export function PrimaryFeatures() {
           </h2>
           <p className="mt-6 text-lg tracking-tight text-blue-100">
             Our team of fully qualified NIC and EIC electrical engineers work in
-            all electrical engineering capacitys, contact us, we'd love to
+            all electrical engineering capacitys, contact us, we&apos;d love to
             discuss how we can help you.
           </p>
         </div>
