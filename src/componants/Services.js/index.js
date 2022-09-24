@@ -10,27 +10,35 @@ import screenshotPayroll from "../../../public/screenshots/payroll.png";
 import screenshotReporting from "../../../public/screenshots/reporting.png";
 import screenshotVatReturns from "../../../public/screenshots/vat-returns.png";
 
+import D1 from "../../../public/1.jpeg";
+import D2 from "../../../public/2.jpeg";
+import D3 from "../../../public/3.jpeg";
+import D4 from "../../../public/4.jpeg";
+
 const features = [
   {
-    title: "Payroll",
+    title: "Domestic",
     description:
       "Keep track of everyone's salaries and whether or not they've been paid. Direct deposit not supported.",
-    image: screenshotPayroll,
+    image1: D1,
+    image2: D2,
+    image3: D3,
+    image4: D4,
   },
   {
-    title: "Claim expenses",
+    title: "Commercial",
     description:
       "All of your receipts organized into one place, as long as you don't mind typing in the data by hand.",
     image: screenshotExpenses,
   },
   {
-    title: "VAT handling",
+    title: "Industrial",
     description:
       "We only sell our software to companies who don't deal with VAT at all, so technically we do all the VAT stuff they need.",
     image: screenshotVatReturns,
   },
   {
-    title: "Reporting",
+    title: "Project planning",
     description:
       "Easily export your data into an Excel spreadsheet where you can do whatever the hell you want with it.",
     image: screenshotReporting,
@@ -72,11 +80,12 @@ export function PrimaryFeatures() {
       <Container className="relative">
         <div className="max-w-2xl md:mx-auto md:text-center xl:max-w-none">
           <h2 className="font-display text-3xl tracking-tight text-white sm:text-4xl md:text-5xl">
-            Everything you need to run your books.
+            View the Electrical services we offer.
           </h2>
           <p className="mt-6 text-lg tracking-tight text-blue-100">
-            Well everything you need if you aren’t that picky about minor
-            details like tax compliance.
+            Our team of fully qualified NIC and EIC electrical engineers work in
+            all electrical engineering capacitys, contact us, we'd love to
+            discuss how we can help you.
           </p>
         </div>
         <Tab.Group
@@ -135,13 +144,24 @@ export function PrimaryFeatures() {
                       </p>
                     </div>
                     <div className="mt-10 w-[45rem] overflow-hidden rounded-xl bg-slate-50 shadow-xl shadow-blue-900/20 sm:w-auto lg:mt-0 lg:w-[67.8125rem]">
-                      <Image
-                        className="w-full"
-                        src={feature.image}
-                        alt=""
-                        priority
-                        sizes="(min-width: 1024px) 67.8125rem, (min-width: 640px) 100vw, 45rem"
-                      />
+                      <div className="grid lg:grid-cols-2 grid">
+                        <div>
+                          <Image
+                            className="w-full"
+                            src={feature.image1}
+                            alt=""
+                            priority
+                          />
+                        </div>
+                        <div>
+                          <Image
+                            className="w-full"
+                            src={feature.image2}
+                            alt=""
+                            priority
+                          />
+                        </div>
+                      </div>
                     </div>
                   </Tab.Panel>
                 ))}
