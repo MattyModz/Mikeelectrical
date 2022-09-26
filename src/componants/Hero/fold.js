@@ -81,15 +81,15 @@ function Fold() {
             <div className="text-center">
               <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl md:text-6xl">
                 <span className="block xl:inline">
-                  Leading Electrical Engineer
+                  Leading Electrical contractor
                 </span>{" "}
                 <span className="block text-blue-600 xl:inline">
                   Serving The North West
                 </span>
               </h1>
               <p className="mx-auto mt-3 max-w-md text-base text-gray-500 sm:text-lg md:mt-5 md:max-w-3xl md:text-xl">
-                Mike Richardson is a Nic certified electrician with 10+ years of
-                commercial experience.
+                We are a NIC EIC approved contractors with over 15 years
+                experience in the electrical industry.
               </p>
               <div className="mx-auto mt-5 max-w-md sm:flex sm:justify-center md:mt-8">
                 <div className="rounded-md shadow">
@@ -103,7 +103,7 @@ function Fold() {
                 <div className="mt-3 rounded-md shadow sm:mt-0 sm:ml-3">
                   <a
                     href="#"
-                    className="flex w-full items-center justify-center rounded-md border border-transparent bg-white px-8 py-3 text-base font-medium text-indigo-600 hover:bg-gray-50 md:py-4 md:px-10 md:text-lg"
+                    className="flex w-full items-center justify-center rounded-md border border-transparent bg-white px-8 py-3 text-base font-medium text-blue-600 hover:bg-gray-50 md:py-4 md:px-10 md:text-lg"
                   >
                     View Gallery
                   </a>

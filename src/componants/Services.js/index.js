@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import Image from "next/future/image";
+import Image from "next/image";
 import { Tab } from "@headlessui/react";
 import clsx from "clsx";
 
@@ -23,7 +23,13 @@ const features = [
     image1: D1,
     image2: D2,
     image3: D3,
+
     image4: D4,
+    items: "Full rewires",
+    items1: "Partial rewires ",
+    items2: "Additional sockets ",
+    items3: "Extra lights ",
+    items4: "USB sockets ",
   },
   {
     title: "Commercial",
@@ -67,16 +73,9 @@ export function PrimaryFeatures() {
     <section
       id="features"
       aria-label="Features for running your books"
-      className="relative overflow-hidden bg-blue-600 pt-20 pb-28 sm:py-32"
+      className="relative overflow-hidden bg-blue-600 pt-10 pb-28 sm:py-32 lg:h-screen"
     >
-      <Image
-        className="absolute top-1/2 left-1/2 max-w-none translate-x-[-44%] translate-y-[-42%]"
-        src={backgroundImage}
-        alt=""
-        width={2245}
-        height={1636}
-        unoptimized
-      />
+      <div></div>
       <Container className="relative">
         <div className="max-w-2xl md:mx-auto md:text-center xl:max-w-none">
           <h2 className="font-display text-3xl tracking-tight text-white sm:text-4xl md:text-5xl">
@@ -87,7 +86,12 @@ export function PrimaryFeatures() {
             all electrical engineering capacitys, contact us, we&apos;d love to
             discuss how we can help you.
           </p>
+          <div className="flex justify-center p-6 mt-4  bg-gray-50/20 rounded-xl">
+            <Image src={"/IPAF.png"} width={150} height={75} />
+            <Image src={"/Nic cert.svg"} width={150} height={75} />
+          </div>
         </div>
+
         <Tab.Group
           as="div"
           className="mt-16 grid grid-cols-1 items-center gap-y-2 pt-10 sm:gap-y-6 md:mt-20 lg:grid-cols-12 lg:pt-0"
@@ -146,20 +150,11 @@ export function PrimaryFeatures() {
                     <div className="mt-10 w-[45rem] overflow-hidden rounded-xl bg-slate-50 shadow-xl shadow-blue-900/20 sm:w-auto lg:mt-0 lg:w-[67.8125rem]">
                       <div className="grid lg:grid-cols-2 grid">
                         <div>
-                          <Image
-                            className="w-full"
-                            src={feature.image1}
-                            alt=""
-                            priority
-                          />
-                        </div>
-                        <div>
-                          <Image
-                            className="w-full"
-                            src={feature.image2}
-                            alt=""
-                            priority
-                          />
+                          <li> {feature.items}</li>
+                          <li> {feature.items}</li>
+                          <li> {feature.items}</li>
+                          <li> {feature.items}</li>
+                          <li> {feature.items}</li>
                         </div>
                       </div>
                     </div>

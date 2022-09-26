@@ -5,12 +5,15 @@ import { sanityClient } from "../sanity";
 import Blogcard from "../src/componants/Blog";
 import Contact from "../src/componants/Contact/index";
 import { PrimaryFeatures } from "../src/componants/Services.js";
+import Reviews from "../src/componants/Marquee";
 export default function Home({ posts }) {
   return (
     <>
       <Index />
+
       <PrimaryFeatures />
       <About />
+      <Reviews />
       <Contact />
       <Blogcard posts={posts} />
     </>
