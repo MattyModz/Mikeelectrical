@@ -23,15 +23,15 @@ export default function Blogcard({ posts }) {
                   <img
                     src={urlFor(post.mainImage).url()}
                     alt=""
-                    width={700}
-                    height={500}
+                    width={500}
+                    height={300}
                     className="rounded-xl"
                   />
                 </Link>
               </div>
               <div className="flex flex-col items-start justify-center w-full h-full py-6 mb-6 md:mb-0 md:w-full lg:w-1/2">
                 <div className="flex flex-col items-start justify-center h-full space-y-3 transform md:pl-10 lg:pl-16 md:space-y-5 ">
-                  <div className="bg-purple-400 flex items-center pl-2 pr-3 py-1.5 leading-none rounded-full text-xs font-medium uppercase text-black inline-block ">
+                  <div className="bg-blue-500 flex items-center pl-2 pr-3 py-1.5 leading-none rounded-full text-xs font-medium uppercase text-white inline-block ">
                     <svg
                       className="w-3.5 h-3.5 mr-1"
                       fill="currentColor"
@@ -48,7 +48,7 @@ export default function Blogcard({ posts }) {
                     passHref
                   >
                     <h1 className="text-4xl font-bold leading-none lg:text-5xl xl:text-6xl">
-                      {post.title}.
+                      {post.title}
                     </h1>
                   </Link>
                   <p className="pt-2 text-sm font-medium">

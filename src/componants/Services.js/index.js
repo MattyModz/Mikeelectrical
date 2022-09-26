@@ -18,8 +18,7 @@ import D4 from "../../../public/4.jpeg";
 const features = [
   {
     title: "Domestic",
-    description:
-      "Keep track of everyone's salaries and whether or not they've been paid. Direct deposit not supported.",
+    description: "Description about Domestic electrical services we offer",
     image1: D1,
     image2: D2,
     image3: D3,
@@ -33,8 +32,7 @@ const features = [
   },
   {
     title: "Commercial",
-    description:
-      "All of your receipts organized into one place, as long as you don't mind typing in the data by hand.",
+    description: "Description about Commercial electrical services we offer",
     image: screenshotExpenses,
     items: "Full rewires",
     items1: "Partial rewires ",
@@ -44,8 +42,7 @@ const features = [
   },
   {
     title: "Industrial",
-    description:
-      "We only sell our software to companies who don't deal with VAT at all, so technically we do all the VAT stuff they need.",
+    description: "Description about Industrial electrical services we offer",
     image: screenshotVatReturns,
     items: "Full rewires",
     items1: "Partial rewires ",
@@ -55,8 +52,7 @@ const features = [
   },
   {
     title: "Project planning",
-    description:
-      "Easily export your data into an Excel spreadsheet where you can do whatever the hell you want with it.",
+    description: "Description about electrical planning services we offer",
     image: screenshotReporting,
     items: "Full rewires",
     items1: "Partial rewires ",
