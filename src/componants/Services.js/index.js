@@ -4,7 +4,7 @@ import { Tab } from "@headlessui/react";
 import clsx from "clsx";
 
 import { Container } from "../Container";
-import backgroundImage from "../../../public/background-features.jpg";
+
 import screenshotExpenses from "../../../public/screenshots/expenses.png";
 
 import screenshotReporting from "../../../public/screenshots/reporting.png";
