@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import Image from "next/image";
 import { Tab } from "@headlessui/react";
 import clsx from "clsx";
-
+import { motion } from "framer-motion";
 import { Container } from "../Container";
 
 import screenshotExpenses from "../../../public/screenshots/expenses.png";
@@ -36,18 +36,33 @@ const features = [
     description:
       "All of your receipts organized into one place, as long as you don't mind typing in the data by hand.",
     image: screenshotExpenses,
+    items: "Full rewires",
+    items1: "Partial rewires ",
+    items2: "Additional sockets ",
+    items3: "Extra lights ",
+    items4: "USB sockets ",
   },
   {
     title: "Industrial",
     description:
       "We only sell our software to companies who don't deal with VAT at all, so technically we do all the VAT stuff they need.",
     image: screenshotVatReturns,
+    items: "Full rewires",
+    items1: "Partial rewires ",
+    items2: "Additional sockets ",
+    items3: "Extra lights ",
+    items4: "USB sockets ",
   },
   {
     title: "Project planning",
     description:
       "Easily export your data into an Excel spreadsheet where you can do whatever the hell you want with it.",
     image: screenshotReporting,
+    items: "Full rewires",
+    items1: "Partial rewires ",
+    items2: "Additional sockets ",
+    items3: "Extra lights ",
+    items4: "USB sockets ",
   },
 ];
 
@@ -147,17 +162,24 @@ export function PrimaryFeatures() {
                         {feature.description}
                       </p>
                     </div>
-                    <div className="mt-10 w-[45rem] overflow-hidden rounded-xl bg-slate-50 shadow-xl shadow-blue-900/20 sm:w-auto lg:mt-0 lg:w-[67.8125rem]">
+                    <motion.div
+                      className="mt-10 w-[45rem] overflow-hidden rounded-xl bg-slate-50 shadow-xl shadow-blue-900/20 sm:w-auto lg:mt-0 lg:w-[67.8125rem]"
+                      initial={{ opacity: 0, x: 0 }}
+                      whileInView={{
+                        opacity: 1,
+                        x: 5,
+                      }}
+                    >
                       <div className="grid lg:grid-cols-2 grid">
-                        <div>
+                        <div className=" p-6 mt-4  bg-gray-50/50 rounded-xl font-bold">
                           <li> {feature.items}</li>
-                          <li> {feature.items}</li>
-                          <li> {feature.items}</li>
-                          <li> {feature.items}</li>
-                          <li> {feature.items}</li>
+                          <li> {feature.items1}</li>
+                          <li> {feature.items2}</li>
+                          <li> {feature.items3}</li>
+                          <li> {feature.items4}</li>
                         </div>
                       </div>
-                    </div>
+                    </motion.div>
                   </Tab.Panel>
                 ))}
               </Tab.Panels>
