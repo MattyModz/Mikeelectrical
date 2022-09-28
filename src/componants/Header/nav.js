@@ -1,5 +1,5 @@
 import Image from "next/image";
-
+import Link from "next/link";
 export default function Nav() {
   return (
     <>
@@ -7,13 +7,13 @@ export default function Nav() {
         <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
           <div className="relative flex items-center justify-between">
             <div className="flex-shrink-0">
-              <a
-                href="#"
+              <Link
+                href="/"
                 title=""
                 className="flex rounded outline-none focus:ring-1 focus:ring-gray-900 focus:ring-offset-2"
               >
                 <Image width={150} height={75} src="/logo.svg" alt="" />
-              </a>
+              </Link>
             </div>
 
             <div className="flex lg:hidden">

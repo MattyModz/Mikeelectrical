@@ -70,8 +70,9 @@ function Post({ data, preview }) {
                 )}
                 <p className="font-extralight text-sm flex justify-center">
                   {" "}
+                  Blog post by{" "}
                   {post?.author.name && (
-                    <span className="text-orange-600">{post.author.name}</span>
+                    <span className="text-orange-600"> {post.author.name}</span>
                   )}{" "}
                   - published at{" "}
                   {new Date(post._createdAt).toLocaleDateString()}
