@@ -23,7 +23,7 @@ export default function Blogcard({ posts }) {
                   <img
                     src={urlFor(post.mainImage).url()}
                     alt=""
-                    width={500}
+                    width={300}
                     height={300}
                     className="rounded-xl"
                   />

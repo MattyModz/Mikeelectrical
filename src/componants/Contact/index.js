@@ -4,7 +4,9 @@ function Contact() {
   return (
     <div className="px-10 mt-24 mx-auto max-w-7xl md:px-16 ">
       <div className="max-w-3xl mx-auto mb-10 md:mb-16">
-        <p className="text-xs  text-blue-500 uppercase">Contact Mike</p>
+        <p className="text-xs  text-blue-500 uppercase">
+          We want to hear from you
+        </p>
         <h2 className="mt-1 text-2xl  text-left text-gray-800 lg:text-3xl md:mt-2">
           Need to ask us a question?
         </h2>

@@ -6,16 +6,20 @@ import Blogcard from "../src/componants/Blog";
 import Contact from "../src/componants/Contact/index";
 import { PrimaryFeatures } from "../src/componants/Services.js";
 import Reviews from "../src/componants/Marquee";
-export default function Home({ posts }) {
+export default function Home({ posts, reviews }) {
+  console.log(reviews);
   return (
     <>
       <Index />
 
       <PrimaryFeatures />
       <About />
-      <Reviews />
+      <Reviews reviews={reviews} />
       <Contact />
-      <Blogcard posts={posts} />
+      <div className="flex justify-center bg-gray-50">
+        {" "}
+        <Blogcard posts={posts} />
+      </div>
     </>
   );
 }
@@ -34,11 +38,21 @@ mainImage,
 slug
 }`;
 
-  const posts = await sanityClient.fetch(query);
+  const queryreview = `*[_type == "reviews"]{
+  
+  title,
+  review,
+  stars,
+  name,
 
+}`;
+
+  const posts = await sanityClient.fetch(query);
+  const reviews = await sanityClient.fetch(queryreview);
   return {
     props: {
       posts,
+      reviews,
     },
   };
 };

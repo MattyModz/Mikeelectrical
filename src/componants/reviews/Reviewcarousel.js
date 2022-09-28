@@ -1,19 +1,19 @@
 import { motion, AnimatePresence } from "framer-motion";
 import React from "react";
 const info = [
-  "John Millington",
+  "ian Hewitt",
+  "Olivia McMurray",
+  "Anne Worsley",
   "Catherine Marie",
-  "Julie Hughes",
-  "Lucy Callaghan",
-  "Kyle Tuck",
+  "Mel Emmo",
 ];
 
 const Body = [
+  "Great guy and fantastic job ! 👍 thank you Mike",
+  "Fantastic service, would highly recommend. That good were going to have more work done 👌",
+  "Mike, is punctual, courteous and his attention to detail is first class.",
   "Brilliant, prompt service. Will look no further from now on, highly recommended!",
-  "Brilliant, prompt service. Will look no further from now on, highly recommended!",
-  "Brilliant, prompt service. Will look no further from now on, highly recommended!",
-  "Brilliant, prompt service. Will look no further from now on, highly recommended!",
-  "Brilliant, prompt service. Will look no further from now on, highly recommended!",
+  "Great job, came out next day and very professional thanks",
 ];
 const variants = {
   visible: {
@@ -60,7 +60,11 @@ export class Review extends React.Component {
             key={current}
           >
             <div className="flex flex-col w-full h-full    ">
-              <div className="md:text-l  text-base font-interr bg-blue-50 p-2 rounded-xl ">
+              <div className="md:text-l  font-bold font-interr bg-blue-50 text-xl p-4 rounded-xl ">
+                <div>
+                  {" "}
+                  <span className="text-yellow-300  ">★★★★★</span>
+                </div>
                 {Body[current]}
               </div>
             </div>

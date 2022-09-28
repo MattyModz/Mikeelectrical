@@ -8,7 +8,7 @@ export default function Nav() {
           <div className="relative flex items-center justify-between">
             <div className="flex-shrink-0">
               <a
-                href="#"
+                href="/"
                 title=""
                 className="flex rounded outline-none focus:ring-1 focus:ring-gray-900 focus:ring-offset-2"
               >

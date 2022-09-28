@@ -8,45 +8,21 @@ export default function Reviews({ reviews }) {
         <div>
           <div className="text-white flex justify-center mb-4"> </div>
         </div>
-        <div></div>
-        <Marquee>
+
+        <Marquee gradient={false}>
           <div className="flex px-5">
-            <Reviewcard
-              className="px-4 py-3"
-              title={"review"}
-              stars={5}
-              Name={"review.CustomerReviews.customerName"}
-              Review={
-                "review.CustomerReviews.commentreview.CustomerReviews.commentreview.CustomerReviews.comment"
-              }
-            />
-            <Reviewcard
-              className="px-4 py-3"
-              title={"review"}
-              stars={5}
-              Name={"review.CustomerReviews.customerName"}
-              Review={
-                "review.CustomerReviews.commentreview.CustomerReviews.commentreview.CustomerReviews.comment"
-              }
-            />
-            <Reviewcard
-              className="px-4 py-3"
-              title={"review"}
-              stars={5}
-              Name={"review.CustomerReviews.customerName"}
-              Review={
-                "review.CustomerReviews.commentreview.CustomerReviews.commentreview.CustomerReviews.comment"
-              }
-            />
-            <Reviewcard
-              className="px-4 py-3"
-              title={"review"}
-              stars={5}
-              Name={"review.CustomerReviews.customerName"}
-              Review={
-                "review.CustomerReviews.commentreview.CustomerReviews.commentreview.CustomerReviews.comment"
-              }
-            />
+            {reviews.map((review) => {
+              return (
+                <Reviewcard
+                  className="px-4 py-3"
+                  key={review.title}
+                  title={review.title}
+                  stars={review.stars}
+                  name={review.name}
+                  review={review.review}
+                />
+              );
+            })}
           </div>
         </Marquee>
       </div>
