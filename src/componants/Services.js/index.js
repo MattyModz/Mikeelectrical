@@ -25,42 +25,49 @@ const features = [
 
     image4: D4,
     items: "Full rewires",
-    items1: "Partial rewires ",
-    items2: "Additional sockets ",
-    items3: "Extra lights ",
-    items4: "USB sockets ",
+    items: "Partial rewires",
+    items: "Additional sockets",
+    items: "Extra lights",
+    items: "USB Sockets",
+    items: "Landlord certificates (ECIR)",
+    items: "Decorative lights",
+    items: "Outside sockets ",
+    test: ["test21", "test22"],
   },
   {
     title: "Commercial",
     description: "Description about Commercial electrical services we offer",
     image: screenshotExpenses,
-    items: "Full rewires",
-    items1: "Partial rewires ",
-    items2: "Additional sockets ",
-    items3: "Extra lights ",
-    items4: "USB sockets ",
+    items: "New Sockets",
+    items: "New lighting",
+    items: "Maintenance",
+    items: "3 Phase power",
+    items: "Full tests for insurance purposes",
+    items: "Maintenance",
+    items: "Outside lighting",
+    test: ["test241", "test224"],
   },
   {
     title: "Industrial",
     description: "Description about Industrial electrical services we offer",
     image: screenshotVatReturns,
-    items: "Full rewires",
-    items1: "Partial rewires ",
-    items2: "Additional sockets ",
-    items3: "Extra lights ",
-    items4: "USB sockets ",
+    items: "full rewires",
+    items: "full rewires",
+    items: "full rewires",
+    items: "full rewires",
+    items: "full rewires",
+    items: "full rewires",
+    test: ["test241", "test224"],
   },
   {
     title: "Project planning",
     description: "Description about electrical planning services we offer",
     image: screenshotReporting,
     items: "Full rewires",
-    items1: "Partial rewires ",
-    items2: "Additional sockets ",
-    items3: "Extra lights ",
-    items4: "USB sockets ",
   },
 ];
+
+[];
 
 export function PrimaryFeatures() {
   const [tabOrientation, setTabOrientation] = useState("horizontal");
@@ -166,13 +173,9 @@ export function PrimaryFeatures() {
                         x: 5,
                       }}
                     >
-                      <div className="grid lg:grid-cols-2 grid">
+                      <div className="grid lg:grid-cols-2 ">
                         <div className=" p-6 mt-4  bg-gray-50/50 rounded-xl font-bold">
-                          <li> {feature.items}</li>
-                          <li> {feature.items1}</li>
-                          <li> {feature.items2}</li>
-                          <li> {feature.items3}</li>
-                          <li> {feature.items4}</li>
+                          <li> {feature.test}</li>
                         </div>
                       </div>
                     </motion.div>
