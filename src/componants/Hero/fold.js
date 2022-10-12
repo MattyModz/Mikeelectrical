@@ -1,5 +1,5 @@
 import React from "react";
-
+import Image from "next/image";
 function Fold() {
   return (
     <>
@@ -77,8 +77,16 @@ function Fold() {
         </div>
 
         <div className="relative  pb-16 sm:pb-24">
-          <main className="mx-auto mt-16 max-w-7xl px-4 sm:mt-24">
-            <div className="text-center">
+          <main className="mx-auto  max-w-7xl px-4 sm:mt-16">
+            <div className="flex justify-center ">
+              {" "}
+              <div className="flex justify-center    bg-gray-50/20 rounded-xl">
+                <Image src={"/IPAF.png"} width={100} height={50} />
+                <Image src={"/Nic cert.svg"} width={100} height={50} />
+                <Image src={"/logoicon.svg"} width={60} height={50} />
+              </div>
+            </div>
+            <div className="text-center py-6">
               <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl md:text-6xl">
                 <span className="block xl:inline">
                   Leading Electrical contractor

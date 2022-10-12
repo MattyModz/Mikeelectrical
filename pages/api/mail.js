@@ -1,10 +1,15 @@
 import nodemailer from "nodemailer";
 
 export default async function handler(req, res) {
-  const { fullName, Email, Message, SenderEmail } = req.body;
+  const { fullName, Message, SenderEmail } = req.body;
 
   const transporter = nodemailer.createTransport({
-    service: "hotmail",
+    host: "smtp-mail.outlook.com", // hostname
+    secureConnection: false, // TLS requires secureConnection to be false
+    port: 587, // port for secure SMTP
+    tls: {
+      ciphers: "SSLv3",
+    },
     auth: {
       user: process.env.user,
       pass: process.env.pass,
@@ -13,7 +18,7 @@ export default async function handler(req, res) {
 
   try {
     const emailRes = await transporter.sendMail({
-      from: Email,
+      from: "mikewire@hotmail.com",
       to: "mikewire@hotmail.com",
       subject: `Contact form submission from ${fullName}`,
       html: `<p>You have a new contact form submission</p><br>
