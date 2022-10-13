@@ -74,8 +74,6 @@ function Post({ data, preview }) {
                   {post?.author.name && (
                     <span className="text-orange-600"> {post.author.name}</span>
                   )}{" "}
-                  - published at{" "}
-                  {new Date(post._createdAt).toLocaleDateString()}
                 </p>
               </div>
             </motion.div>

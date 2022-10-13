@@ -4,7 +4,7 @@ import { urlFor } from "../../../sanity";
 import Link from "next/link";
 export default function Blogcard({ posts }) {
   return (
-    <section className=" text-black bg-body-dark font-inerr p-4 py-16">
+    <section className=" text-black bg-body-dark flex font-inerr p-4 py-16">
       <div className="container  lg:grid grid-cols-2   gap-3 ">
         {posts.map((post, index) =>
           index === 0 ? (

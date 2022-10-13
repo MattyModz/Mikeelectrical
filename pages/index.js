@@ -23,7 +23,7 @@ export default function Home({
       <About />
       <Reviews reviews={reviews} />
       <Contact />
-      <div className="flex justify-center bg-gray-50">
+      <div className="flex justify-center  p-12">
         {" "}
         <Blogcard posts={posts} />
       </div>

@@ -6,6 +6,7 @@ export default async function handler(req, res) {
   const transporter = nodemailer.createTransport({
     host: "smtp-mail.outlook.com", // hostname
     secureConnection: false, // TLS requires secureConnection to be false
+
     port: 587, // port for secure SMTP
     tls: {
       ciphers: "SSLv3",
@@ -18,8 +19,8 @@ export default async function handler(req, res) {
 
   try {
     const emailRes = await transporter.sendMail({
-      from: "mikewire@hotmail.com",
-      to: "mikewire@hotmail.com",
+      from: "matt-wynne07@hotmail.co.uk",
+      to: "matt-wynne07@hotmail.co.uk",
       subject: `Contact form submission from ${fullName}`,
       html: `<p>You have a new contact form submission</p><br>
        <p><strong>Email: </strong> ${SenderEmail} </p><br>
