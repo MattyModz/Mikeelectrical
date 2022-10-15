@@ -1,375 +1,71 @@
-import { useRouter } from "next/router";
-import { Fragment } from "react";
-import { Popover, Transition } from "@headlessui/react";
-import Link from "next/link";
 import Image from "next/image";
-import {
-  BookmarkAltIcon,
-  ChartBarIcon,
-  CursorClickIcon,
-  MenuIcon,
-  XIcon,
-  QuestionMarkCircleIcon,
-  ChatIcon,
-} from "@heroicons/react/outline";
-import { ChevronDownIcon } from "@heroicons/react/solid";
-
-const solutions = [
-  // {
-  //   name: "Packages",
-  //   description: "Let us curate the perfect backlink profile for your Niche",
-  //   href: "/link-building-packages",
-  //   icon: CubeIcon,
-  // },
-  {
-    name: "Services",
-    description:
-      "Quality guest postings, included 600+ word content and 1 Follow link.",
-    href: "/guest-posts",
-    icon: ChartBarIcon,
-  },
-  {
-    name: "Gallary",
-    description: "Links posted directly into .",
-    href: "/niche-edits",
-    icon: CursorClickIcon,
-  },
-  {
-    name: "Reviews",
-    description: "Links posted directly into .",
-    href: "/niche-edits",
-    icon: CursorClickIcon,
-  },
-];
-
-const resources = [
-  {
-    name: "About",
-    description:
-      "Get all of your questions answered in our forums or contact support.",
-    href: "/about",
-    icon: QuestionMarkCircleIcon,
-  },
-  {
-    name: "Blog",
-    description:
-      "Learn how to maximize our platform to get the most out of it.",
-    href: "/contact",
-    icon: ChatIcon,
-  },
-  {
-    name: "Contact",
-    description:
-      "See what meet-ups and other events we might be planning near you.",
-    href: "/blog",
-    icon: BookmarkAltIcon,
-  },
-];
-// const recentPosts = [
-//   { id: 1, name: "Boost your conversion rate", href: "#" },
-//   {
-//     id: 2,
-//     name: "How to use search engine optimization to drive traffic to your site",
-//     href: "#",
-//   },
-//   { id: 3, name: "Improve your customer experience", href: "#" },
-// ];
-
-function classNames(...classes) {
-  return classes.filter(Boolean).join(" ");
-}
-
-const Z_INDEX = {
-  zIndex: 1000,
-};
-
-export default function Example() {
-  const { asPath } = useRouter();
-
+import Link from "next/link";
+export default function Nav() {
   return (
-    <Popover
-      className=" bg-gray-50 text-white z-90 lg:p-4 py-2"
-      style={Z_INDEX}
-    >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6">
-        <div className="flex justify-between items-center   md:justify-start md:space-x-10">
-          <div className="flex justify-start lg:w-0 lg:flex-1">
-            <Link href="/">
-              <Image width={150} height={75} src="/logo.svg" alt="" />
-            </Link>
-          </div>
-          <div className="  md:hidden">
-            <Popover.Button className="bg-gray-100 rounded-md p-2 inline-flex items-center justify-center text-black hover:text-white   mt-2 mr-4">
-              <span className="sr-only">Open menu</span>
-              <MenuIcon className="h-6 w-6" aria-hidden="true" />
-            </Popover.Button>
-          </div>
+    <>
+      <header className="relative py-4 md:py-6 bg-gray-50">
+        <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+          <div className="relative flex items-center justify-between">
+            <div className="flex-shrink-0">
+              <Link
+                href="/"
+                title=""
+                className="flex rounded outline-none focus:ring-1 focus:ring-gray-900 focus:ring-offset-2"
+              >
+                <Image width={150} height={75} src="/logo.svg" alt="" />
+              </Link>
+            </div>
 
-          <Popover.Group
-            as="nav"
-            className="hidden md:flex space-x-10 items-center "
-          >
-            <Popover className="relative">
-              {({ open }) => (
-                <>
-                  <Popover.Button
-                    className={classNames(
-                      open ? "text-black " : "text-black",
-                      "group  inline-flex items-center hover:bg-black hover:bg-opacity-30 p-2 rounded-md px-4 font-medium  "
-                    )}
-                  >
-                    <span>Packages</span>
-                    <ChevronDownIcon
-                      className={classNames(
-                        open ? "text-black" : "text-black",
-                        "ml-2 h-5 w-5 text-black"
-                      )}
-                      aria-hidden="true"
-                    />
-                  </Popover.Button>
+            <div className="flex lg:hidden">
+              <button type="button" className="text-gray-900">
+                <svg
+                  className="w-7 h-7"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="1.5"
+                    d="M4 6h16M4 12h16M4 18h16"
+                  ></path>
+                </svg>
+              </button>
+            </div>
 
-                  <Transition
-                    as={Fragment}
-                    enter="transition ease-out duration-200"
-                    enterFrom="opacity-0 translate-y-1"
-                    enterTo="opacity-100 translate-y-0"
-                    leave="transition ease-in duration-150"
-                    leaveFrom="opacity-100 translate-y-0"
-                    leaveTo="opacity-0 translate-y-1"
-                  >
-                    <Popover.Panel className="absolute z-10 -ml-4 mt-3 transform px-2 w-screen max-w-md sm:px-0 lg:ml-0 lg:left-1/2 lg:-translate-x-1/2">
-                      <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden">
-                        <div className="relative grid gap-6  bg-gray-100 border  px-5 py-6 sm:gap-8 sm:p-8 ">
-                          {solutions.map((item) => (
-                            <a
-                              key={item.name}
-                              href={item.href}
-                              className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50"
-                            >
-                              <item.icon
-                                className=" flex-shrink-0 h-6 w-6  "
-                                aria-hidden="true"
-                              />
-                              <div className="ml-4">
-                                <p className="text-base font-medium text-gray-900">
-                                  {item.name}
-                                </p>
-                                <p className="mt-1 text-sm text-gray-500">
-                                  {item.description}
-                                </p>
-                              </div>
-                            </a>
-                          ))}
-                        </div>
-                      </div>
-                    </Popover.Panel>
-                  </Transition>
-                </>
-              )}
-            </Popover>
+            <div className="hidden lg:absolute lg:inset-y-0 lg:flex lg:items-center lg:justify-center lg:space-x-12 lg:-translate-x-1/2 lg:left-1/2">
+              <a
+                href="#"
+                title=""
+                className="text-base font-medium text-gray-900 transition-all duration-200 rounded focus:outline-none font-pj hover:text-opacity-50 focus:ring-1 focus:ring-gray-900 focus:ring-offset-2"
+              >
+                {" "}
+                Contact{" "}
+              </a>
 
-            <a
-              href="https://topsecret.link-city.co/"
-              className="p-8 text-black   test  text-center s:text-2xl lg:text-l  font-bold p-2 cursor-pointer   rounded-xl "
-            >
-              The Link Blueprint
-            </a>
+              <a
+                href="#"
+                title=""
+                className="text-base font-medium text-gray-900 transition-all duration-200 rounded focus:outline-none font-pj hover:text-opacity-50 focus:ring-1 focus:ring-gray-900 focus:ring-offset-2"
+              >
+                {" "}
+                Our Work{" "}
+              </a>
 
-            <Popover className="relative">
-              {({ open }) => (
-                <>
-                  <Popover.Button
-                    className={classNames(
-                      open ? "text-black" : "text-black",
-                      "group p-2 rounded-md inline-flex items-center text-base font-medium px-4 hover:bg-black hover:bg-opacity-30 rounded-md"
-                    )}
-                  >
-                    <span>More</span>
-                    <ChevronDownIcon
-                      className={classNames(
-                        open ? "text-black" : "text-black",
-                        "ml-2 h-5 w-5 group-hover:text-black"
-                      )}
-                      aria-hidden="true"
-                    />
-                  </Popover.Button>
-
-                  <Transition
-                    as={Fragment}
-                    enter="transition ease-out duration-200"
-                    enterFrom="opacity-0 translate-y-1"
-                    enterTo="opacity-100 translate-y-0"
-                    leave="transition ease-in duration-150"
-                    leaveFrom="opacity-100 translate-y-0"
-                    leaveTo="opacity-0 translate-y-1"
-                  >
-                    <Popover.Panel className="absolute  z-10 left-1/2 transform -translate-x-1/2 mt-3 px-2 w-screen max-w-md sm:px-0">
-                      <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden">
-                        <div
-                          className={`relative grid gap-6 bg-white px-5 py-6 sm:gap-8 border sm:p-8 ${
-                            asPath === "/guest-posts"
-                              ? "border-blue-300"
-                              : asPath === "/niche-edits"
-                              ? "border-orange-500"
-                              : "border-purple-300"
-                          }`}
-                        >
-                          {resources.map((item) => (
-                            <a
-                              key={item.name}
-                              href={item.href}
-                              className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50"
-                            >
-                              <item.icon
-                                className={`flex-shrink-0 h-6 w-6 ${
-                                  asPath === "/guest-posts"
-                                    ? "text-[#0468C8]"
-                                    : asPath === "/niche-edits"
-                                    ? "text-[#f6ad5a]"
-                                    : " text-blue-600"
-                                }`}
-                                aria-hidden="true"
-                              />
-
-                              <div className="ml-4">
-                                <p className="text-base font-medium text-gray-900">
-                                  {item.name}
-                                </p>
-                                <p className="mt-1 text-sm text-gray-500">
-                                  {item.description}
-                                </p>
-                              </div>
-                            </a>
-                          ))}
-                        </div>
-                      </div>
-                    </Popover.Panel>
-                  </Transition>
-                </>
-              )}
-            </Popover>
-          </Popover.Group>
-          <div className="hidden md:flex items-center justify-end md:flex-1 lg:w-0 sm:hidden">
-            <a
-              href="https://calendly.com/mcp-link-city-b2r/link-city-30-min-meeting?month=2022-05"
-              className=" m:hidden whitespace-nowrap inline-flex items-center justify-center px-4 py-2 rounded-md shadow-sm text-base font-medium text-white  bg-black/50 hover:bg-opacity-30 mr-2"
-            >
-              Strategy call
-            </a>
-            <a
-              href="https://clients.link-city.co/"
-              className="text-black    text-center s:text-2xl lg:text-l  font-bold p-4 cursor-pointer test  rounded-xl "
-            >
-              Sign in
-            </a>
+              <a
+                href="#"
+                title=""
+                className="text-base font-medium text-gray-900 transition-all duration-200 rounded focus:outline-none font-pj hover:text-opacity-50 focus:ring-1 focus:ring-gray-900 focus:ring-offset-2"
+              >
+                {" "}
+                Blog{" "}
+              </a>
+            </div>
           </div>
         </div>
-      </div>
-
-      <Transition
-        as={Fragment}
-        enter="duration-200 ease-out"
-        enterFrom="opacity-0 scale-95"
-        enterTo="opacity-100 scale-100"
-        leave="duration-100 ease-in"
-        leaveFrom="opacity-100 scale-100"
-        leaveTo="opacity-0 scale-95"
-      >
-        <Popover.Panel
-          focus
-          className="absolute   top-0 inset-x-0 p-2 z-10 transition transform origin-top-right md:hidden"
-        >
-          <div className="h-full rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 bg-white divide-y-2 divide-gray-50 z-50">
-            <div className="pt-5 pb-6 px-5">
-              <div className="flex items-center justify-between">
-                <div>
-                  <Link href="/">
-                    <Image width={150} height={75} src="/logo.svg" alt="" />
-                  </Link>
-                </div>
-                <div className="-mr-2">
-                  <Popover.Button className="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
-                    <span className="sr-only">Close menu</span>
-                    <XIcon className="h-6 w-6" aria-hidden="true" />
-                  </Popover.Button>
-                </div>
-              </div>
-              <div className="mt-6">
-                <nav className="align-center">
-                  {solutions.map((item) => (
-                    <div key={item.name}>
-                      <Link href={item.href}>
-                        <a
-                          href={item.href}
-                          className="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50"
-                        >
-                          <item.icon
-                            className={` flex-shrink-0 h-6 w-6 ${
-                              asPath === "/guest-posts"
-                                ? "text-[#0468C8]"
-                                : asPath === "/niche-edits"
-                                ? "text-[#f6ad5a]"
-                                : " text-blue-600"
-                            }`}
-                            aria-hidden="true"
-                          />
-                          <Popover.Button>
-                            <span className="ml-3 text-base font-medium text-gray-900">
-                              {item.name}
-                            </span>
-                          </Popover.Button>
-                        </a>
-                      </Link>
-                    </div>
-                  ))}
-                </nav>
-              </div>
-            </div>
-            <div className="py-6 px-5 space-y-6 ">
-              <div className="grid grid-cols-2 gap-y-4 gap-x-8">
-                {resources.map((item) => (
-                  <a
-                    key={item.name}
-                    href={item.href}
-                    className="text-base  font-medium text-gray-900 hover:text-gray-700"
-                  >
-                    {item.name}
-                  </a>
-                ))}
-              </div>
-              <div>
-                <a
-                  href="https://clients.link-city.co/signup/"
-                  className={`w-full flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white   ${
-                    asPath === "/guest-posts"
-                      ? "bg-[#0468C8]"
-                      : asPath === "/niche-edits"
-                      ? "bg-[#f6ad5a] hover:bg-orange-300"
-                      : " bg-blue-600"
-                  }`}
-                >
-                  Message on whatsapp
-                </a>
-                <p className="mt-6 text-center text-base font-medium text-gray-500">
-                  Loved our service?{" "}
-                  <a
-                    href="https://www.facebook.com/mikewireelectrical/reviews"
-                    className={`  ${
-                      asPath === "/guest-posts"
-                        ? "text-[#0468C8]"
-                        : asPath === "/niche-edits"
-                        ? "text-[#f6ad5a]"
-                        : " text-blue-600"
-                    }`}
-                  >
-                    Leave a review
-                  </a>
-                </p>
-              </div>
-            </div>
-          </div>
-        </Popover.Panel>
-      </Transition>
-    </Popover>
+      </header>
+    </>
   );
 }
