@@ -58,23 +58,24 @@ function Post({ data, preview }) {
                 </h1>
               )}
 
-              <div className="py-2 flex items-center space-x-2 px-4 justify-center">
+              <div className="py-4 flex items-center space-x-2 px-4 justify-center">
                 {post?.author.image && (
                   <Image
-                    className="h-10 w-10 rounded-full"
+                    className="h-10 w-10 rounded-full p-2"
                     src={urlFor(post.author.image).url()!}
                     alt=""
                     width={50}
                     height={50}
                   />
-                )}
-                <p className="font-extralight text-sm flex justify-center">
+                )}{" "}
+                <div className="pl-2">
                   {" "}
-                  Blog post by{" "}
                   {post?.author.name && (
-                    <span className="text-orange-600"> {post.author.name}</span>
+                    <span className="text-orange-600">
+                      {""} {post.author.name}
+                    </span>
                   )}{" "}
-                </p>
+                </div>
               </div>
             </motion.div>
             <motion.div

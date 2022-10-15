@@ -2,7 +2,7 @@ import { useForm } from "react-hook-form";
 import axios from "axios";
 import { useState } from "react";
 import { motion } from "framer-motion";
-
+import Submit from "./submit";
 const Contact = () => {
   const { register, handleSubmit } = useForm();
   const [formStatus, setFormStatus] = useState(false);
@@ -99,7 +99,7 @@ const Contact = () => {
                   }}
                   viewport={{ once: true }}
                 >
-                  <div className="text-black">Thankyou</div>
+                  <Submit />
                 </motion.h2>
               </div>
             </div>
