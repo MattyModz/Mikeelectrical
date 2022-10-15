@@ -15,61 +15,42 @@ import D2 from "../../../public/2.jpeg";
 import D3 from "../../../public/3.jpeg";
 import D4 from "../../../public/4.jpeg";
 
-const features = [
-  {
-    title: "Domestic",
-    description: "Description about Domestic electrical services we offer",
-    image1: D1,
-    image2: D2,
-    image3: D3,
+export function PrimaryFeatures({ indus, comm, plan, dom }) {
+  const features = [
+    {
+      title: "Domestic",
+      description: "Description about Domestic electrical services we offer",
+      image1: D1,
+      image2: D2,
+      image3: D3,
 
-    image4: D4,
-    items: "Full rewires",
-    items: "Partial rewires",
-    items: "Additional sockets",
-    items: "Extra lights",
-    items: "USB Sockets",
-    items: "Landlord certificates (ECIR)",
-    items: "Decorative lights",
-    items: "Outside sockets ",
-    test: ["test21", "test22"],
-  },
-  {
-    title: "Commercial",
-    description: "Description about Commercial electrical services we offer",
-    image: screenshotExpenses,
-    items: "New Sockets",
-    items: "New lighting",
-    items: "Maintenance",
-    items: "3 Phase power",
-    items: "Full tests for insurance purposes",
-    items: "Maintenance",
-    items: "Outside lighting",
-    test: ["test241", "test224"],
-  },
-  {
-    title: "Industrial",
-    description: "Description about Industrial electrical services we offer",
-    image: screenshotVatReturns,
-    items: "full rewires",
-    items: "full rewires",
-    items: "full rewires",
-    items: "full rewires",
-    items: "full rewires",
-    items: "full rewires",
-    test: ["test241", "test224"],
-  },
-  {
-    title: "Project planning",
-    description: "Description about electrical planning services we offer",
-    image: screenshotReporting,
-    items: "Full rewires",
-  },
-];
+      image4: D4,
 
-[];
+      test: indus,
+    },
+    {
+      title: "Commercial",
+      description: "Description about Commercial electrical services we offer",
+      image: screenshotExpenses,
 
-export function PrimaryFeatures() {
+      test: comm,
+    },
+    {
+      title: "Industrial",
+      description: "Description about Industrial electrical services we offer",
+      image: screenshotVatReturns,
+
+      test: plan,
+    },
+    {
+      title: "Project planning",
+      description: "Description about electrical planning services we offer",
+      image: screenshotReporting,
+
+      test: dom,
+    },
+  ];
+
   const [tabOrientation, setTabOrientation] = useState("horizontal");
 
   useEffect(() => {
@@ -175,7 +156,9 @@ export function PrimaryFeatures() {
                     >
                       <div className="grid lg:grid-cols-2 ">
                         <div className=" p-6 mt-4  bg-gray-50/50 rounded-xl font-bold">
-                          <li> {feature.test}</li>
+                          {feature.test.map((item) => (
+                            <div key={item[0]}>{item}</div>
+                          ))}
                         </div>
                       </div>
                     </motion.div>
@@ -189,3 +172,12 @@ export function PrimaryFeatures() {
     </section>
   );
 }
+
+// items: "Full rewires",
+//     items: "Partial rewires",
+//     items: "Additional sockets",
+//     items: "Extra lights",
+//     items: "USB Sockets",
+//     items: "Landlord certificates (ECIR)",
+//     items: "Decorative lights",
+//     items: "Outside sockets ",

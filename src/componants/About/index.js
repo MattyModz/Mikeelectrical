@@ -6,24 +6,13 @@ function index() {
       <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
         <div className="grid items-center grid-cols-1 lg:grid-cols-2 gap-x-12 xl:gap-x-24 gap-y-12">
           <div className="relative lg:mb-12 ">
-            <img
-              className="absolute -right- -bottom-8 xl:-bottom-12 xl:-right-4 "
-              src="https://cdn.rareblocks.xyz/collection/celebration/images/content/3/dots-pattern.svg"
-              alt=""
-            />
-            <div className="pl-12 pr-6">
-              <img className="relative" src="MikeRitchie.jpg" alt="" />
+            <div className="flex items-start">
+              <blockquote className="ml-5 z-50 p-4">
+                <Review />
+              </blockquote>
             </div>
-            <div className="absolute left-0 pr-12 bottom-8 xl:bottom-20">
-              <div className="max-w-xs  rounded-lg sm:max-w-md xl:max-w-md">
-                <div className="px-3 py-4 sm:px-5 sm:py-8">
-                  <div className="flex items-start">
-                    <blockquote className="ml-5">
-                      <Review />
-                    </blockquote>
-                  </div>
-                </div>
-              </div>
+            <div className="pl-12 pr-6 -mt-24 p-8">
+              <img className="relative" src="MikeRitchie.jpg" alt="" />
             </div>
           </div>
 

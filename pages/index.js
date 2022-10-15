@@ -6,6 +6,7 @@ import Blogcard from "../src/componants/Blog";
 import Contact from "../src/componants/Contact/index";
 import { PrimaryFeatures } from "../src/componants/Services.js";
 import Reviews from "../src/componants/Marquee";
+import { object } from "prop-types";
 export default function Home({
   posts,
   reviews,
@@ -14,12 +15,21 @@ export default function Home({
   planninglist,
   industriallist,
 }) {
-  console.log(industriallist);
+  let indarray = industriallist.map((a) => a.service);
+  let comarray = commerciallist.map((a) => a.service);
+  let domarray = domesticlist.map((a) => a.service);
+  let projarray = planninglist.map((a) => a.service);
+  console.log(planninglist);
   return (
     <>
       <Index />
 
-      <PrimaryFeatures />
+      <PrimaryFeatures
+        indus={indarray}
+        comm={comarray}
+        plan={projarray}
+        dom={domarray}
+      />
       <About />
       <Reviews reviews={reviews} />
       <Contact />
