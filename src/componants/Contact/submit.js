@@ -12,7 +12,7 @@ function Submit() {
               viewBox="0 0 390 390"
             >
               <defs></defs>
-              <g fill-rule="nonzero">
+              <g fillRule="nonzero">
                 <circle cx="10" cy="10" r="9.5"></circle>
                 <circle cx="47" cy="10" r="9.5"></circle>
                 <circle cx="84" cy="10" r="9.5"></circle>
@@ -90,7 +90,7 @@ function Submit() {
               viewBox="0 0 390 390"
             >
               <defs></defs>
-              <g fill-rule="nonzero">
+              <g fillRule="nonzero">
                 <circle cx="10" cy="10" r="9.5"></circle>
                 <circle cx="47" cy="10" r="9.5"></circle>
                 <circle cx="84" cy="10" r="9.5"></circle>
