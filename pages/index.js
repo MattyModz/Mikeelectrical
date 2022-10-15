@@ -6,7 +6,7 @@ import Blogcard from "../src/componants/Blog";
 import Contact from "../src/componants/Contact/index";
 import { PrimaryFeatures } from "../src/componants/Services.js";
 import Reviews from "../src/componants/Marquee";
-import { object } from "prop-types";
+
 export default function Home({
   posts,
   reviews,
@@ -15,10 +15,10 @@ export default function Home({
   planninglist,
   industriallist,
 }) {
-  let indarray = industriallist.map((a) => a.service);
-  let comarray = commerciallist.map((a) => a.service);
-  let domarray = domesticlist.map((a) => a.service);
-  let projarray = planninglist.map((a) => a.service);
+  const indarray = industriallist.map((a) => a.service);
+  const comarray = commerciallist.map((a) => a.service);
+  const domarray = domesticlist.map((a) => a.service);
+  const projarray = planninglist.map((a) => a.service);
   console.log(planninglist);
   return (
     <>
