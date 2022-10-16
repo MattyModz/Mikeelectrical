@@ -1,6 +1,6 @@
 export default function Reviewcard({ stars, title, review, name }) {
   return (
-    <div className="w-full max-w-sm mx-10 px-6 py-5  mx-auto bg-blue-600  rounded-xl shadow-md ">
+    <div className="w-full max-w-sm mx-10 px-6 py-5  mx-auto bg-blue-400  rounded-xl shadow-md ">
       <div className="flex items-center justify-between">
         <span className="text-sm font-light text-white opacity-50 dark:text-gray-400">
           Our reviews

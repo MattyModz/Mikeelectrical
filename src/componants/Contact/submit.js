@@ -2,7 +2,7 @@ import React from "react";
 
 function Submit() {
   return (
-    <section className="bg-white">
+    <section className="">
       <div className="px-8 py-8 mx-auto max-w-7xl">
         <div className="relative px-6 py-10 overflow-hidden border border-blue-100 rounded-2xl lg:p-16 lg:flex lg:flex-col lg:items-center lg:justify-between">
           <div className="absolute top-0 left-0 z-10 hidden h-full p-4 mt-1 ml-3 -mt-4 -ml-4 transform -rotate-90 lg:block">
@@ -12,159 +12,15 @@ function Submit() {
               viewBox="0 0 390 390"
             >
               <defs></defs>
-              <g fillRule="nonzero">
-                <circle cx="10" cy="10" r="9.5"></circle>
-                <circle cx="47" cy="10" r="9.5"></circle>
-                <circle cx="84" cy="10" r="9.5"></circle>
-                <circle cx="121" cy="10" r="9.5"></circle>
-                <circle cx="158" cy="10" r="9.5"></circle>
-                <circle cx="195" cy="10" r="9.5"></circle>
-                <circle cx="232" cy="10" r="9.5"></circle>
-                <circle cx="269" cy="10" r="9.5"></circle>
-                <circle cx="306" cy="10" r="9.5"></circle>
-                <circle cx="343" cy="10" r="9.5"></circle>
-                <circle cx="380" cy="10" r="9.5"></circle>
-                <circle cx="47" cy="47" r="9.5"></circle>
-                <circle cx="84" cy="47" r="9.5"></circle>
-                <circle cx="121" cy="47" r="9.5"></circle>
-                <circle cx="158" cy="47" r="9.5"></circle>
-                <circle cx="195" cy="47" r="9.5"></circle>
-                <circle cx="232" cy="47" r="9.5"></circle>
-                <circle cx="269" cy="47" r="9.5"></circle>
-                <circle cx="306" cy="47" r="9.5"></circle>
-                <circle cx="343" cy="47" r="9.5"></circle>
-                <circle cx="380" cy="47" r="9.5"></circle>
-                <circle cx="84" cy="84" r="9.5"></circle>
-                <circle cx="121" cy="84" r="9.5"></circle>
-                <circle cx="158" cy="84" r="9.5"></circle>
-                <circle cx="195" cy="84" r="9.5"></circle>
-                <circle cx="232" cy="84" r="9.5"></circle>
-                <circle cx="269" cy="84" r="9.5"></circle>
-                <circle cx="306" cy="84" r="9.5"></circle>
-                <circle cx="343" cy="84" r="9.5"></circle>
-                <circle cx="380" cy="84" r="9.5"></circle>
-                <circle cx="121" cy="121" r="9.5"></circle>
-                <circle cx="158" cy="121" r="9.5"></circle>
-                <circle cx="195" cy="121" r="9.5"></circle>
-                <circle cx="232" cy="121" r="9.5"></circle>
-                <circle cx="269" cy="121" r="9.5"></circle>
-                <circle cx="306" cy="121" r="9.5"></circle>
-                <circle cx="343" cy="121" r="9.5"></circle>
-                <circle cx="380" cy="121" r="9.5"></circle>
-                <circle cx="158" cy="158" r="9.5"></circle>
-                <circle cx="195" cy="158" r="9.5"></circle>
-                <circle cx="232" cy="158" r="9.5"></circle>
-                <circle cx="269" cy="158" r="9.5"></circle>
-                <circle cx="306" cy="158" r="9.5"></circle>
-                <circle cx="343" cy="158" r="9.5"></circle>
-                <circle cx="380" cy="158" r="9.5"></circle>
-                <circle cx="195" cy="195" r="9.5"></circle>
-                <circle cx="232" cy="195" r="9.5"></circle>
-                <circle cx="269" cy="195" r="9.5"></circle>
-                <circle cx="306" cy="195" r="9.5"></circle>
-                <circle cx="343" cy="195" r="9.5"></circle>
-                <circle cx="380" cy="195" r="9.5"></circle>
-                <circle cx="232" cy="232" r="9.5"></circle>
-                <circle cx="269" cy="232" r="9.5"></circle>
-                <circle cx="306" cy="232" r="9.5"></circle>
-                <circle cx="343" cy="232" r="9.5"></circle>
-                <circle cx="380" cy="232" r="9.5"></circle>
-                <circle cx="269" cy="269" r="9.5"></circle>
-                <circle cx="306" cy="269" r="9.5"></circle>
-                <circle cx="343" cy="269" r="9.5"></circle>
-                <circle cx="380" cy="269" r="9.5"></circle>
-                <circle cx="306" cy="306" r="9.5"></circle>
-                <circle cx="343" cy="306" r="9.5"></circle>
-                <circle cx="380" cy="306" r="9.5"></circle>
-                <circle cx="343" cy="343" r="9.5"></circle>
-                <circle cx="380" cy="343" r="9.5"></circle>
-                <circle cx="380" cy="380" r="9.5"></circle>
-              </g>
             </svg>
           </div>
 
-          <div className="absolute bottom-0 right-0 z-10 hidden h-full p-4 mt-1 ml-3 -mb-4 -mr-4 transform rotate-90 md:block">
-            <svg
-              className="w-auto h-full fill-current text-blue-50"
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 390 390"
-            >
-              <defs></defs>
-              <g fillRule="nonzero">
-                <circle cx="10" cy="10" r="9.5"></circle>
-                <circle cx="47" cy="10" r="9.5"></circle>
-                <circle cx="84" cy="10" r="9.5"></circle>
-                <circle cx="121" cy="10" r="9.5"></circle>
-                <circle cx="158" cy="10" r="9.5"></circle>
-                <circle cx="195" cy="10" r="9.5"></circle>
-                <circle cx="232" cy="10" r="9.5"></circle>
-                <circle cx="269" cy="10" r="9.5"></circle>
-                <circle cx="306" cy="10" r="9.5"></circle>
-                <circle cx="343" cy="10" r="9.5"></circle>
-                <circle cx="380" cy="10" r="9.5"></circle>
-                <circle cx="47" cy="47" r="9.5"></circle>
-                <circle cx="84" cy="47" r="9.5"></circle>
-                <circle cx="121" cy="47" r="9.5"></circle>
-                <circle cx="158" cy="47" r="9.5"></circle>
-                <circle cx="195" cy="47" r="9.5"></circle>
-                <circle cx="232" cy="47" r="9.5"></circle>
-                <circle cx="269" cy="47" r="9.5"></circle>
-                <circle cx="306" cy="47" r="9.5"></circle>
-                <circle cx="343" cy="47" r="9.5"></circle>
-                <circle cx="380" cy="47" r="9.5"></circle>
-                <circle cx="84" cy="84" r="9.5"></circle>
-                <circle cx="121" cy="84" r="9.5"></circle>
-                <circle cx="158" cy="84" r="9.5"></circle>
-                <circle cx="195" cy="84" r="9.5"></circle>
-                <circle cx="232" cy="84" r="9.5"></circle>
-                <circle cx="269" cy="84" r="9.5"></circle>
-                <circle cx="306" cy="84" r="9.5"></circle>
-                <circle cx="343" cy="84" r="9.5"></circle>
-                <circle cx="380" cy="84" r="9.5"></circle>
-                <circle cx="121" cy="121" r="9.5"></circle>
-                <circle cx="158" cy="121" r="9.5"></circle>
-                <circle cx="195" cy="121" r="9.5"></circle>
-                <circle cx="232" cy="121" r="9.5"></circle>
-                <circle cx="269" cy="121" r="9.5"></circle>
-                <circle cx="306" cy="121" r="9.5"></circle>
-                <circle cx="343" cy="121" r="9.5"></circle>
-                <circle cx="380" cy="121" r="9.5"></circle>
-                <circle cx="158" cy="158" r="9.5"></circle>
-                <circle cx="195" cy="158" r="9.5"></circle>
-                <circle cx="232" cy="158" r="9.5"></circle>
-                <circle cx="269" cy="158" r="9.5"></circle>
-                <circle cx="306" cy="158" r="9.5"></circle>
-                <circle cx="343" cy="158" r="9.5"></circle>
-                <circle cx="380" cy="158" r="9.5"></circle>
-                <circle cx="195" cy="195" r="9.5"></circle>
-                <circle cx="232" cy="195" r="9.5"></circle>
-                <circle cx="269" cy="195" r="9.5"></circle>
-                <circle cx="306" cy="195" r="9.5"></circle>
-                <circle cx="343" cy="195" r="9.5"></circle>
-                <circle cx="380" cy="195" r="9.5"></circle>
-                <circle cx="232" cy="232" r="9.5"></circle>
-                <circle cx="269" cy="232" r="9.5"></circle>
-                <circle cx="306" cy="232" r="9.5"></circle>
-                <circle cx="343" cy="232" r="9.5"></circle>
-                <circle cx="380" cy="232" r="9.5"></circle>
-                <circle cx="269" cy="269" r="9.5"></circle>
-                <circle cx="306" cy="269" r="9.5"></circle>
-                <circle cx="343" cy="269" r="9.5"></circle>
-                <circle cx="380" cy="269" r="9.5"></circle>
-                <circle cx="306" cy="306" r="9.5"></circle>
-                <circle cx="343" cy="306" r="9.5"></circle>
-                <circle cx="380" cy="306" r="9.5"></circle>
-                <circle cx="343" cy="343" r="9.5"></circle>
-                <circle cx="380" cy="343" r="9.5"></circle>
-                <circle cx="380" cy="380" r="9.5"></circle>
-              </g>
-            </svg>
-          </div>
+          <div className="absolute bottom-0 right-0 z-10 hidden h-full p-4 mt-1 ml-3 -mb-4 -mr-4 transform rotate-90 md:block"></div>
 
-          <h3 className="relative z-20 mb-4 -mt-1 text-4xl font-bold text-blue-900">
+          <h3 className="relative z-20 mb-4 -mt-1 text-4xl font-bold text-white">
             Thanks for getting in touch...
           </h3>
-          <p className="relative z-20 mb-6 text-lg text-blue-700">
+          <p className="relative z-20 mb-6 text-lg text-white">
             We will get back to you as soon as possible!
           </p>
           <div className="relative z-20 flex flex-col items-center w-full space-y-5 md:space-x-5 md:space-y-0 md:flex-row md:w-auto lg:flex-shrink-0 md:px-0">

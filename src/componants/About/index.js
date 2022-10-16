@@ -6,12 +6,7 @@ function index() {
       <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
         <div className="grid items-center grid-cols-1 lg:grid-cols-2 gap-x-12 xl:gap-x-24 gap-y-12">
           <div className="relative lg:mb-12 ">
-            <div className="flex items-start">
-              <blockquote className="ml-5 z-50 p-4">
-                <Review />
-              </blockquote>
-            </div>
-            <div className="pl-12 pr-6 -mt-24 p-8">
+            <div className="pl-12 pr-6  p-8">
               <img className="relative" src="MikeRitchie.jpg" alt="" />
             </div>
           </div>

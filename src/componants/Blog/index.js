@@ -4,7 +4,7 @@ import { urlFor } from "../../../sanity";
 import Link from "next/link";
 export default function Blogcard({ posts }) {
   return (
-    <section className=" text-black bg-body-dark flex font-inerr p-4 py-16">
+    <section className=" text-black bg-body-dark font-inerr p-4 mb-8">
       <div className="container  lg:grid grid-cols-2   gap-3 ">
         {posts.map((post, index) =>
           index === 0 ? (
@@ -23,13 +23,13 @@ export default function Blogcard({ posts }) {
                   <img
                     src={urlFor(post.mainImage).url()}
                     alt=""
-                    width={300}
+                    width={500}
                     height={300}
                     className="rounded-xl"
                   />
                 </Link>
               </div>
-              <div className="flex flex-col items-start justify-center w-full h-full py-6 mb-6 md:mb-0 md:w-full lg:w-1/2">
+              <div className="flex flex-col items-start justify-center w-full h-full py-6 mb-6 md:mb-0 md:w-full ">
                 <div className="flex flex-col items-start justify-center h-full space-y-3 transform md:pl-10 lg:pl-16 md:space-y-5 ">
                   <div className="bg-blue-500 flex items-center pl-2 pr-3 py-1.5 leading-none rounded-full text-xs font-medium uppercase text-white inline-block ">
                     <svg

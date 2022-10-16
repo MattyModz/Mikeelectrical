@@ -3,6 +3,7 @@ import axios from "axios";
 import { useState } from "react";
 import { motion } from "framer-motion";
 import Submit from "./submit";
+
 const Contact = () => {
   const { register, handleSubmit } = useForm();
   const [formStatus, setFormStatus] = useState(false);
@@ -26,22 +27,38 @@ const Contact = () => {
   }
 
   return (
-    <div className="relative overflow-hidden bg-white">
-      <div className="bg-body-dark h-full  rounded-xl container">
-        <div className="text-6xl font-extrabold text-center  sm:text-5xl sm:text-6xl md:text-7xl sm:text-center md:text-center ">
-          <h1 className="pb-5 text-black z-1  font-inter sm:text-7xl sm:text-6xl md:text-7xl sm:text-center md:text-center">
-            Contact Us
-          </h1>
-        </div>
+    <div className="py-8">
+      <motion.section
+        class="w-full  bg-white "
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0, transition: { duration: 1 } }}
+        viewport={{ once: true }}
+      >
+        <div class="relative px-4 mx-auto max-w-7xl">
+          <div class="relative  items-center   p-6 overflow-hidden shadow-2xl   bg-gradient-to-r from-blue-500 to-blue-600 rounded-2xl  ">
+            <div class="absolute top-0 right-0">
+              <svg
+                viewBox="0 0 487 487"
+                class="object-cover w-full h-full"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M487 486.7c-66.1-3.6-132.3-7.3-186.3-37s-95.9-85.3-126.2-137.2c-30.4-51.8-49.3-99.9-76.5-151.4C70.9 109.6 35.6 54.8.3 0H487v486.7z"
+                  fill="#FFF"
+                  fill-rule="nonzero"
+                  fill-opacity=".1"
+                ></path>
+              </svg>
+            </div>
+            <h1 className="text-white font-bold  text-center text-6xl">
+              Get in touch
+            </h1>
 
-        <section className=" place-items-center">
-          <div className="max-w-lg lg:max-w-none mx-auto lg:mx-0">
-            <div className="">
-              <div className="px-10 mx-auto max-w-7xl md:px-16">
-                <div className="max-w-3xl mx-auto mb-10 md:mb-16"></div>
+            <section className=" py-8">
+              <div className="">
                 <form
                   onSubmit={handleSubmit(onSubmitForm)}
-                  className="grid max-w-3xl gap-4 mx-auto sm:grid-cols-2"
+                  className="grid max-w-3xl gap-4 mx-auto "
                   style={formStatus ? { display: "none" } : { display: "" }}
                 >
                   <div>
@@ -83,7 +100,7 @@ const Contact = () => {
                   <div className="flex items-center justify-between sm:col-span-2 mb-8">
                     <input
                       type="submit"
-                      className=" inline-block px-8 py-3 text-sm font-semibold text-center text-white transition duration-100 rounded-md outline-none bg-blue-500 md:text-base"
+                      className=" inline-block px-8 py-3 text-sm font-semibold text-center text-white transition duration-100 rounded-md outline-none bg-blue-400 md:text-base"
                     />
                   </div>
                 </form>
@@ -102,10 +119,10 @@ const Contact = () => {
                   <Submit />
                 </motion.h2>
               </div>
-            </div>
+            </section>
           </div>
-        </section>
-      </div>
+        </div>
+      </motion.section>
     </div>
   );
 };
