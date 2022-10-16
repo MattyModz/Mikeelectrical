@@ -2,6 +2,7 @@ import { useRouter } from "next/router";
 import { Fragment } from "react";
 import { Popover, Transition } from "@headlessui/react";
 import Link from "next/link";
+import { NavLink } from "./navlink";
 import Image from "next/image";
 import {
   BookmarkAltIcon,
@@ -24,13 +25,13 @@ const solutions = [
     name: "Services",
     description:
       "Quality guest postings, included 600+ word content and 1 Follow link.",
-    href: "/guest-posts",
+    href: "#services",
     icon: ChartBarIcon,
   },
   {
     name: "Contact Us",
     description: "Links posted directly into .",
-    href: "/niche-edits",
+    href: "#contact",
     icon: CursorClickIcon,
   },
 ];
@@ -40,21 +41,21 @@ const resources = [
     name: "About",
     description:
       "Get all of your questions answered in our forums or contact support.",
-    href: "/about",
+    href: "/#about",
     icon: QuestionMarkCircleIcon,
   },
   {
     name: "Contact",
     description:
       "Learn how to maximize our platform to get the most out of it.",
-    href: "/contact",
+    href: "/#contact",
     icon: ChatIcon,
   },
   {
     name: "Blog",
     description:
       "See what meet-ups and other events we might be planning near you.",
-    href: "/blog",
+    href: "/#blog",
     icon: BookmarkAltIcon,
   },
 ];
@@ -76,7 +77,10 @@ export default function Example() {
   const { asPath } = useRouter();
 
   return (
-    <Popover className=" bg-gray-50 text-black  z-90" style={Z_INDEX}>
+    <Popover
+      className="scroll-smooth bg-gray-50 text-black  z-90"
+      style={Z_INDEX}
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <div className="flex justify-between items-center  py-2 md:justify-start md:space-x-10">
           <div className="flex justify-start lg:w-0 lg:flex-1">
@@ -93,34 +97,36 @@ export default function Example() {
 
           <div as="nav" className="hidden md:flex space-x-10 items-center ">
             <span className=" m:hidden blackspace-nowrap inline-flex items-center justify-center px-4 py-2 rounded-md shadow-sm text-base font-medium text-black  hover:bg-black hover:bg-opacity-30 mr-2">
-              Services
+              <NavLink className="scroll-smooth" href="#services">
+                Services
+              </NavLink>
             </span>
 
             <a
-              href="https://topsecret.link-city.co/"
+              href="#about"
               className=" m:hidden blackspace-nowrap inline-flex items-center justify-center px-4 py-2 rounded-md shadow-sm text-base font-medium text-black  hover:bg-black hover:bg-opacity-30 mr-2 "
             >
               About
             </a>
 
-            <>
+            <a href="#blog">
               <span className=" m:hidden blackspace-nowrap inline-flex items-center justify-center px-4 py-2 rounded-md shadow-sm text-base font-medium text-black  hover:bg-black hover:bg-opacity-30 mr-2">
                 Blog
               </span>
-            </>
+            </a>
           </div>
           <div className="hidden md:flex items-center justify-end md:flex-1 lg:w-0 sm:hidden">
             <a
-              href="https://calendly.com/mcp-link-city-b2r/link-city-30-min-meeting?month=2022-05"
+              href="#contact"
               className=" m:hidden blackspace-nowrap inline-flex items-center justify-center px-4 py-2 rounded-md shadow-sm text-base font-medium text-black  hover:bg-black hover:bg-opacity-30 mr-2"
             >
-              Strategy call
+              Contact
             </a>
             <a
               href="https://clients.link-city.co/"
               className="text-black     text-center s:text-2xl lg:text-l  font-bold p-4 cursor-pointer test  rounded-xl "
             >
-              Sign in
+              07909588291
             </a>
           </div>
         </div>
@@ -199,15 +205,20 @@ export default function Example() {
               </div>
               <div>
                 <a
-                  href="https://clients.link-city.co/signup/"
+                  href="https://wa.me/7912 882644"
                   className="w-full flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-blue-600   "
                 >
-                  Contact on whatsapp
+                  <Image
+                    src={"/WhatsApp.svg"}
+                    height={"50"}
+                    width={"200"}
+                    className="text-white"
+                  />
                 </a>
                 <p className="mt-6 text-center text-base font-medium text-gray-500">
                   Happy with our service?{" "}
                   <a
-                    href="https://clients.link-city.co/login"
+                    href="https://www.facebook.com/mikewireelectrical/reviews"
                     className={`  ${
                       asPath === "/guest-posts"
                         ? "text-[#0468C8]"

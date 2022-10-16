@@ -23,18 +23,31 @@ export default function Home({
   return (
     <>
       <Index />
+      <div id="services">
+        <PrimaryFeatures
+          indus={indarray}
+          comm={comarray}
+          plan={projarray}
+          dom={domarray}
+        />
+      </div>
+      <div id="about">
+        {" "}
+        <About />
+      </div>
+      <div id="reviews">
+        {" "}
+        <Reviews reviews={reviews} />
+      </div>
+      <div id="contact">
+        {" "}
+        <Contact />
+      </div>
 
-      <PrimaryFeatures
-        indus={indarray}
-        comm={comarray}
-        plan={projarray}
-        dom={domarray}
-      />
-      <About />
-      <Reviews reviews={reviews} />
-      <Contact />
-
-      <Blogcard posts={posts} />
+      <div id="blog">
+        {" "}
+        <Blogcard posts={posts} />
+      </div>
     </>
   );
 }

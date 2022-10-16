@@ -14,7 +14,7 @@ function Footer() {
         <ul className="box-border flex mx-auto my-6 space-x-6">
           <li className="relative mt-2 leading-7 text-left text-gray-900 border-0 border-gray-200 md:border-b-0 md:mt-0">
             <a
-              href="#_"
+              href="/"
               className="box-border items-center block w-full px-4 text-base font-normal leading-normal text-gray-900 no-underline border-solid cursor-pointer hover:text-blue-600 focus-within:text-blue-700 sm:px-0 sm:text-left"
             >
               Home
@@ -22,7 +22,7 @@ function Footer() {
           </li>
           <li className="relative mt-2 leading-7 text-left text-gray-900 border-0 border-gray-200 md:border-b-0 md:mt-0">
             <a
-              href="#_"
+              href="#about"
               className="box-border items-center block w-full px-4 text-base font-normal leading-normal text-gray-900 no-underline border-solid cursor-pointer hover:text-blue-600 focus-within:text-blue-700 sm:px-0 sm:text-left"
             >
               About
@@ -30,15 +30,15 @@ function Footer() {
           </li>
           <li className="relative mt-2 leading-7 text-left text-gray-900 border-0 border-gray-200 md:border-b-0 md:mt-0">
             <a
-              href="#_"
+              href="#gallary"
               className="box-border items-center block w-full px-4 text-base font-normal leading-normal text-gray-900 no-underline border-solid cursor-pointer hover:text-blue-600 focus-within:text-blue-700 sm:px-0 sm:text-left"
             >
-              Work
+              Gallary
             </a>
           </li>
           <li className="relative mt-2 leading-7 text-left text-gray-900 border-0 border-gray-200 md:border-b-0 md:mt-0">
             <a
-              href="#_"
+              href="#blog"
               className="box-border items-center block w-full px-4 text-base font-normal leading-normal text-gray-900 no-underline border-solid cursor-pointer hover:text-blue-600 focus-within:text-blue-700 sm:px-0 sm:text-left"
             >
               Blog
@@ -47,7 +47,7 @@ function Footer() {
         </ul>
         <div className="box-border right-0 flex justify-center w-full mt-4 space-x-3 border-solid md:w-auto md:justify-end md:absolute md:mt-0">
           <a
-            href="#_"
+            href="https://www.facebook.com/mikewireelectrical/"
             className="inline-flex items-center leading-7 text-gray-900 no-underline border-0 border-gray-200 cursor-pointer hover:text-blue-700 focus-within:text-blue-700"
           >
             <svg
