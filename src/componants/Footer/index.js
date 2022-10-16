@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 function Footer() {
   return (
     <div className="box-border px-4 mx-auto border-solid md:px-6 lg:px-8 max-w-7xl tails-selected-element">
