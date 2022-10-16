@@ -29,24 +29,24 @@ const Contact = () => {
   return (
     <div className="py-8">
       <motion.section
-        class="w-full  bg-white "
+        className="w-full  bg-white "
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0, transition: { duration: 1 } }}
         viewport={{ once: true }}
       >
-        <div class="relative px-4 mx-auto max-w-7xl">
-          <div class="relative  items-center   p-6 overflow-hidden shadow-2xl   bg-gradient-to-r from-blue-500 to-blue-600 rounded-2xl  ">
-            <div class="absolute top-0 right-0">
+        <div className="relative px-4 mx-auto max-w-7xl">
+          <div className="relative  items-center   p-6 overflow-hidden shadow-2xl   bg-gradient-to-r from-blue-500 to-blue-600 rounded-2xl  ">
+            <div className="absolute top-0 right-0">
               <svg
                 viewBox="0 0 487 487"
-                class="object-cover w-full h-full"
+                className="object-cover w-full h-full"
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <path
                   d="M487 486.7c-66.1-3.6-132.3-7.3-186.3-37s-95.9-85.3-126.2-137.2c-30.4-51.8-49.3-99.9-76.5-151.4C70.9 109.6 35.6 54.8.3 0H487v486.7z"
                   fill="#FFF"
-                  fill-rule="nonzero"
-                  fill-opacity=".1"
+                  fillRule="nonzero"
+                  fillOpacity=".1"
                 ></path>
               </svg>
             </div>
