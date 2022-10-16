@@ -12,7 +12,6 @@ import {
   QuestionMarkCircleIcon,
   ChatIcon,
 } from "@heroicons/react/outline";
-import { ChevronDownIcon } from "@heroicons/react/solid";
 
 const solutions = [
   // {
@@ -68,10 +67,6 @@ const resources = [
 //   },
 //   { id: 3, name: "Improve your customer experience", href: "#" },
 // ];
-
-function classNames(...classes) {
-  return classes.filter(Boolean).join(" ");
-}
 
 const Z_INDEX = {
   zIndex: 1000,
