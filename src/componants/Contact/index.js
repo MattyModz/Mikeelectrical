@@ -29,7 +29,7 @@ const Contact = () => {
     <div className="relative overflow-hidden bg-white">
       <div className="bg-body-dark h-full  rounded-xl container">
         <div className="text-6xl font-extrabold text-center  sm:text-5xl sm:text-6xl md:text-7xl sm:text-center md:text-center ">
-          <h1 className="pb-5 text-white z-1  font-inter sm:text-7xl sm:text-6xl md:text-7xl sm:text-center md:text-center">
+          <h1 className="pb-5 text-black z-1  font-inter sm:text-7xl sm:text-6xl md:text-7xl sm:text-center md:text-center">
             Contact Us
           </h1>
         </div>

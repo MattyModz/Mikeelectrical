@@ -17,7 +17,7 @@ export default function Reviewcard({ stars, title, review, name }) {
       </div>
 
       <div>
-        <h1 className="mt-2 text-lg  rounded-xl p-2 bg-gray-50/50 font-bold mx-auto text-white dark:text-white">
+        <h1 className="mt-2 text-lg font-bold mx-auto text-white dark:text-white">
           {title}
         </h1>
       </div>
