@@ -5,8 +5,6 @@ import clsx from "clsx";
 import { motion } from "framer-motion";
 import { Container } from "../Container";
 
-import screenshotExpenses from "../../../public/screenshots/expenses.png";
-
 import screenshotReporting from "../../../public/screenshots/reporting.png";
 import screenshotVatReturns from "../../../public/screenshots/vat-returns.png";
 
