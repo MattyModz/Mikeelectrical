@@ -24,29 +24,23 @@ export function PrimaryFeatures({ indus, comm, plan, dom }) {
 
       image4: D4,
 
+      test: dom,
+    },
+
+    {
+      title: "Industrial",
+      description: "Industrial electrical enginerring services we offer",
+      image: screenshotVatReturns,
+
       test: indus,
     },
 
-    {
-      title: "Industrial",
-      description: "Industrial electrical enginerring services we offer",
-      image: screenshotVatReturns,
-
-      test: plan,
-    },
-    {
-      title: "Industrial",
-      description: "Industrial electrical enginerring services we offer",
-      image: screenshotVatReturns,
-
-      test: plan,
-    },
     {
       title: "Commercial",
       description: "Commercial electrical enginerring services we offer",
       image: screenshotReporting,
 
-      test: dom,
+      test: plan,
     },
   ];
 
