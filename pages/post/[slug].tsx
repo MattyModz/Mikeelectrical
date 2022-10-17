@@ -53,12 +53,12 @@ function Post({ data, preview }) {
               viewport={{ once: true }}
             >
               {post?.title && (
-                <h1 className="lg:text-5xl text-4xl text-center mt-10 mb-3 font-interr font-bold p-5 mx-auto">
+                <h1 className="lg:text-5xl p-4 text-4xl text-center mt-10 mb-3 font-interr font-bold p-5 mx-auto">
                   {post.title}
                 </h1>
               )}
 
-              <div className="py-4 flex items-center space-x-2 px-4 justify-center">
+              <div className="p-4 flex items-center space-x-2 px-4 justify-center">
                 {post?.author.image && (
                   <Image
                     className="h-10 w-10 rounded-full p-2"
