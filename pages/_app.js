@@ -14,7 +14,7 @@ function MyApp({ Component, pageProps, router }) {
   useEffect(() => {
     setTimeout(() => {
       setLoading(false);
-    }, 1000);
+    });
   }, []);
   return (
     <div>
