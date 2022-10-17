@@ -71,7 +71,7 @@ export function PrimaryFeatures({ indus, comm, plan, dom }) {
     <section
       id="features"
       aria-label="Features for running your books"
-      className="relative overflow-hidden bg-blue-600 pt-10 pb-28 sm:py-32 lg:h-screen"
+      className="relative overflow-hidden bg-blue-600 pt-10 pb-28 sm:py-32 "
     >
       <div></div>
       <Container className="relative">
