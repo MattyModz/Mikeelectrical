@@ -11,25 +11,20 @@ export default function Home({
   posts,
   reviews,
   domesticlist,
-  commerciallist,
+
   planninglist,
   industriallist,
 }) {
   const indarray = industriallist.map((a) => a.service);
-  const comarray = commerciallist.map((a) => a.service);
+
   const domarray = domesticlist.map((a) => a.service);
   const projarray = planninglist.map((a) => a.service);
-  console.log(planninglist);
+
   return (
     <>
       <Index />
       <div id="services">
-        <PrimaryFeatures
-          indus={indarray}
-          comm={comarray}
-          plan={projarray}
-          dom={domarray}
-        />
+        <PrimaryFeatures indus={indarray} plan={projarray} dom={domarray} />
       </div>
       <div id="about">
         {" "}
@@ -88,12 +83,7 @@ service,
 
 
 }`;
-  const commercial = `*[_type == "commerical"]{
-  
 
-service,
-
-}`;
   const planning = `*[_type == "planning"]{
 
 service,
@@ -103,16 +93,17 @@ service,
   const posts = await sanityClient.fetch(query);
   const domesticlist = await sanityClient.fetch(domestic);
   const industriallist = await sanityClient.fetch(industrial);
-  const commerciallist = await sanityClient.fetch(commercial);
+
   const planninglist = await sanityClient.fetch(planning);
   const reviews = await sanityClient.fetch(queryreview);
+
   return {
     props: {
       posts,
       reviews,
       domesticlist,
       industriallist,
-      commerciallist,
+
       planninglist,
     },
   };

@@ -45,10 +45,10 @@ const resources = [
     icon: QuestionMarkCircleIcon,
   },
   {
-    name: "Contact",
+    name: "Reviews",
     description:
       "Learn how to maximize our platform to get the most out of it.",
-    href: "/#contact",
+    href: "/#review",
     icon: ChatIcon,
   },
   {
@@ -123,8 +123,8 @@ export default function Example() {
               Contact
             </a>
             <a
-              href="https://clients.link-city.co/"
-              className="text-black     text-center s:text-2xl lg:text-l  font-bold p-4 cursor-pointer test  rounded-xl "
+              href=""
+              className="m:hidden blackspace-nowrap inline-flex items-center justify-center px-4 py-2 rounded-md shadow-sm text-base font-medium text-black  hover:bg-black hover:bg-opacity-30 mr-2"
             >
               07909588291
             </a>
@@ -205,15 +205,10 @@ export default function Example() {
               </div>
               <div>
                 <a
-                  href="https://wa.me/7912 882644"
+                  href="#contact"
                   className="w-full flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-blue-600   "
                 >
-                  <Image
-                    src={"/WhatsApp.svg"}
-                    height={"50"}
-                    width={"200"}
-                    className="text-white"
-                  />
+                  Request a quote
                 </a>
                 <p className="mt-6 text-center text-base font-medium text-gray-500">
                   Happy with our service?{" "}

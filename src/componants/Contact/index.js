@@ -50,7 +50,7 @@ const Contact = () => {
                 ></path>
               </svg>
             </div>
-            <h1 className="text-white font-bold  text-center text-6xl">
+            <h1 className="text-white font-bold  text-center lg:text-6xl text-4xl">
               Get in touch
             </h1>
 

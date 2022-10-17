@@ -19,7 +19,7 @@ export function PrimaryFeatures({ indus, comm, plan, dom }) {
   const features = [
     {
       title: "Domestic",
-      description: "Description about Domestic electrical services we offer",
+      description: "Domestic electrical enginerring services we offer",
       image1: D1,
       image2: D2,
       image3: D3,
@@ -28,23 +28,17 @@ export function PrimaryFeatures({ indus, comm, plan, dom }) {
 
       test: indus,
     },
-    {
-      title: "Commercial",
-      description: "Description about Commercial electrical services we offer",
-      image: screenshotExpenses,
 
-      test: comm,
-    },
     {
       title: "Industrial",
-      description: "Description about Industrial electrical services we offer",
+      description: "Industrial electrical enginerring services we offer",
       image: screenshotVatReturns,
 
       test: plan,
     },
     {
-      title: "Project planning",
-      description: "Description about electrical planning services we offer",
+      title: "Commercial",
+      description: "Commercial electrical enginerring services we offer",
       image: screenshotReporting,
 
       test: dom,

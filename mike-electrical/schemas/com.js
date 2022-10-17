@@ -1,6 +1,6 @@
 export default {
-  name: "planning",
-  title: "Commerical",
+  name: "com",
+  title: "Com",
   type: "document",
   fields: [
     {
