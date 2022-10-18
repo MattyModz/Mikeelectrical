@@ -150,7 +150,7 @@ export function PrimaryFeatures({ indus, comm, plan, dom }) {
                       <div className="grid lg:grid-cols-2 ">
                         <div className=" p-6 mt-4  bg-white/10 rounded-xl font-bold ">
                           {feature.test.map((item, index) => (
-                            <div classname="" key={item[0]}>
+                            <div className="" key={item[0]}>
                               <motion.div
                                 className=" text-2xl pl-3 rounded-xl m-2 bg-white/10 text-gray-100"
                                 initial={{ opacity: 0, x: 5 }}
