@@ -140,7 +140,7 @@ export function PrimaryFeatures({ indus, comm, plan, dom }) {
                       </p>
                     </div>
                     <motion.div
-                      className="mt-10 w-[45rem] overflow-hidden rounded-xl bg-slate-50 shadow-xl shadow-blue-900/20 sm:w-auto lg:mt-0 lg:w-[67.8125rem]"
+                      className="mt-10 w-[45rem] overflow-hidden rounded-xl shadow-xl shadow-blue-900/20 sm:w-auto lg:mt-0 lg:w-[67.8125rem]"
                       initial={{ opacity: 0, x: 0 }}
                       whileInView={{
                         opacity: 1,
@@ -148,9 +148,25 @@ export function PrimaryFeatures({ indus, comm, plan, dom }) {
                       }}
                     >
                       <div className="grid lg:grid-cols-2 ">
-                        <div className=" p-6 mt-4  bg-gray-50/50 rounded-xl font-bold">
-                          {feature.test.map((item) => (
-                            <div key={item[0]}>{item}</div>
+                        <div className=" p-6 mt-4  bg-white/10 rounded-xl font-bold ">
+                          {feature.test.map((item, index) => (
+                            <div classname="" key={item[0]}>
+                              <motion.div
+                                className=" text-2xl pl-3 rounded-xl m-2 bg-white/10 text-gray-100"
+                                initial={{ opacity: 0, x: 5 }}
+                                whileInView={{
+                                  opacity: 1,
+                                  x: 0,
+                                  transition: {
+                                    duration: 1,
+                                    delay: index * 0.1,
+                                  },
+                                }}
+                                viewport={{ once: false }}
+                              >
+                                {item}
+                              </motion.div>
+                            </div>
                           ))}
                         </div>
                       </div>
