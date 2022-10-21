@@ -5,7 +5,7 @@ import { ChevronRightIcon } from "@heroicons/react/solid";
 import PortableText from "react-portable-text";
 function Faq({ data }) {
   return (
-    <section className="h-full bg-body-dark pb-16">
+    <section className="h-full bg-body-dark pb-16 container">
       <div className="text-center">
         <h1 className="text-blue-400 font-boold lg:text-6xl text-5xl font-bold ">
           FAQ&apos;S

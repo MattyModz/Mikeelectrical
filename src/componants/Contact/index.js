@@ -3,7 +3,7 @@ import axios from "axios";
 import { useState } from "react";
 import { motion } from "framer-motion";
 import Submit from "./submit";
-
+import Image from "next/image";
 const Contact = () => {
   const { register, handleSubmit } = useForm();
   const [formStatus, setFormStatus] = useState(false);
@@ -53,7 +53,10 @@ const Contact = () => {
             <h1 className="text-white font-bold  text-center lg:text-6xl text-4xl">
               Get in touch
             </h1>
-
+            <div className="flex justify-center p-6 mt-4  bg-gray-50/20 rounded-xl">
+              <Image src={"/IPAF.png"} width={150} height={75} />
+              <Image src={"/Nic cert.svg"} width={150} height={75} />
+            </div>
             <section className=" py-8">
               <div className="">
                 <form

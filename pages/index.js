@@ -41,13 +41,14 @@ export default function Home({
         {" "}
         <About />
       </div>
-      <div>
-        <Faq data={faq} />
-      </div>
       <div id="reviews">
         {" "}
         <Reviews reviews={reviews} />
       </div>
+      <div>
+        <Faq data={faq} />
+      </div>
+
       <div id="contact">
         {" "}
         <Contact />
