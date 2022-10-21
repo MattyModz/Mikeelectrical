@@ -11,7 +11,7 @@ import post from "./post";
 import author from "./author";
 import reviews from "./reviews";
 import domestic from "./domestic";
-
+import faq from "./faq's";
 import industrial from "./industrial";
 import planning from "./planning.js";
 
@@ -30,7 +30,7 @@ export default createSchema({
     reviews,
     domestic,
     industrial,
-
+    faq,
     planning,
 
     // When added to this list, object types can be used as

@@ -4,16 +4,25 @@ import { Tab } from "@headlessui/react";
 import clsx from "clsx";
 import { motion } from "framer-motion";
 import { Container } from "../Container";
-
+import { ChevronRightIcon } from "@heroicons/react/solid";
 import screenshotReporting from "../../../public/screenshots/reporting.png";
 import screenshotVatReturns from "../../../public/screenshots/vat-returns.png";
 
+import { Disclosure } from "@headlessui/react";
 import D1 from "../../../public/1.jpeg";
 import D2 from "../../../public/2.jpeg";
 import D3 from "../../../public/3.jpeg";
 import D4 from "../../../public/4.jpeg";
 
-export function PrimaryFeatures({ indus, comm, plan, dom }) {
+export function PrimaryFeatures({
+  indus,
+  comm,
+  plan,
+  dom,
+  plandesc,
+  indusdesc,
+  domdesc,
+}) {
   const features = [
     {
       title: "Domestic",
@@ -25,6 +34,7 @@ export function PrimaryFeatures({ indus, comm, plan, dom }) {
       image4: D4,
 
       test: dom,
+      itemdescription: domdesc,
     },
 
     {
@@ -33,6 +43,7 @@ export function PrimaryFeatures({ indus, comm, plan, dom }) {
       image: screenshotVatReturns,
 
       test: indus,
+      itemdescription: indusdesc,
     },
 
     {
@@ -41,6 +52,7 @@ export function PrimaryFeatures({ indus, comm, plan, dom }) {
       image: screenshotReporting,
 
       test: plan,
+      itemdescription: plandesc,
     },
   ];
 
@@ -164,7 +176,24 @@ export function PrimaryFeatures({ indus, comm, plan, dom }) {
                                 }}
                                 viewport={{ once: false }}
                               >
-                                {item}
+                                <Disclosure>
+                                  {({ open }) => (
+                                    <>
+                                      <Disclosure.Button className="flex w-full justify-between rounded-lg  px-4 py-2 text-left text-l font-medium text-white  focus:outline-none focus-visible:ring focus-visible:ring-orange-500 focus-visible:ring-opacity-75">
+                                        {item}
+
+                                        <ChevronRightIcon
+                                          className={`${
+                                            open ? "rotate-90 transform" : ""
+                                          } h-5 w-5 text-white`}
+                                        />
+                                      </Disclosure.Button>
+                                      <Disclosure.Panel className="px-4 pt-4 pb-2 text-xl lg:text-2xl text-white ">
+                                        "answer"
+                                      </Disclosure.Panel>
+                                    </>
+                                  )}
+                                </Disclosure>
                               </motion.div>
                             </div>
                           ))}

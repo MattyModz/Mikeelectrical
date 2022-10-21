@@ -3,7 +3,7 @@ import Image from "next/image";
 function Fold() {
   return (
     <>
-      <div className="relative overflow-hidden bg-gray-50">
+      <div className="relative overflow-hidden ">
         <div
           className="hidden sm:absolute sm:inset-y-0 sm:block sm:h-full sm:w-full"
           aria-hidden="true"

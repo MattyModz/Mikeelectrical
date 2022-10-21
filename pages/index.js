@@ -6,12 +6,12 @@ import Blogcard from "../src/componants/Blog";
 import Contact from "../src/componants/Contact/index";
 import { PrimaryFeatures } from "../src/componants/Services.js";
 import Reviews from "../src/componants/Marquee";
-
+import Faq from "../src/componants/Faq's/index";
 export default function Home({
   posts,
   reviews,
   domesticlist,
-
+  faq,
   planninglist,
   industriallist,
 }) {
@@ -19,16 +19,30 @@ export default function Home({
 
   const domarray = domesticlist.map((a) => a.service);
   const projarray = planninglist.map((a) => a.service);
+  const indarraydes = industriallist.map((a) => a.description);
 
+  const domarraydes = domesticlist.map((a) => a.description);
+  const projarraydes = planninglist.map((a) => a.description);
+  console.log(faq);
   return (
     <>
       <Index />
       <div id="services">
-        <PrimaryFeatures indus={indarray} plan={projarray} dom={domarray} />
+        <PrimaryFeatures
+          indus={indarray}
+          indusdesc={indarraydes}
+          plandesc={projarraydes}
+          plan={projarray}
+          domdesc={domarraydes}
+          dom={domarray}
+        />
       </div>
       <div id="about">
         {" "}
         <About />
+      </div>
+      <div>
+        <Faq data={faq} />
       </div>
       <div id="reviews">
         {" "}
@@ -70,9 +84,16 @@ slug
 
 }`;
 
+  const FAQ = `*[_type == "faq"]{
+question,
+answer,
+
+}`;
+
   const domestic = `*[_type == "domestic"]{
   
 service,
+description,
 
 
 }`;
@@ -80,6 +101,7 @@ service,
   
 
 service,
+description,
 
 
 }`;
@@ -87,13 +109,14 @@ service,
   const planning = `*[_type == "planning"]{
 
 service,
+description,
 
 }`;
 
   const posts = await sanityClient.fetch(query);
   const domesticlist = await sanityClient.fetch(domestic);
   const industriallist = await sanityClient.fetch(industrial);
-
+  const faq = await sanityClient.fetch(FAQ);
   const planninglist = await sanityClient.fetch(planning);
   const reviews = await sanityClient.fetch(queryreview);
 
@@ -103,7 +126,7 @@ service,
       reviews,
       domesticlist,
       industriallist,
-
+      faq,
       planninglist,
     },
   };

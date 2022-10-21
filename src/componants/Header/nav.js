@@ -77,10 +77,7 @@ export default function Example() {
   const { asPath } = useRouter();
 
   return (
-    <Popover
-      className="scroll-smooth bg-gray-50 text-black  z-90"
-      style={Z_INDEX}
-    >
+    <Popover className="scroll-smooth  text-black  z-90" style={Z_INDEX}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <div className="flex justify-between items-center  py-2 md:justify-start md:space-x-10">
           <div className="flex justify-start lg:w-0 lg:flex-1">
