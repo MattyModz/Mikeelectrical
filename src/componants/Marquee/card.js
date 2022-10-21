@@ -2,17 +2,19 @@ export default function Reviewcard({ stars, title, review, name }) {
   return (
     <div className="w-full max-w-sm mx-10 px-6 py-8 mb-8  mx-auto bg-white  rounded-xl shadow-md ">
       <div>
-        <div class="flex items-center border-b relative border-gray-100 border-solid pb-5 mb-5">
+        <div className="flex items-center border-b relative border-gray-100 border-solid pb-5 mb-5">
           <img
             src="https://cdn.devdojo.com/images/january2022/07-nick-thompson.jpeg"
-            class="rounded-full mr-3 w-12 h-12"
+            className="rounded-full mr-3 w-12 h-12"
           />
-          <div class="relative">
-            <p class="font-semibold text-gray-600 leading-none my-1">{name}</p>
-            <p class="font-medium text-sm text-gray-400">
-              <div className="  text-xl font-semibold rounded-xl   leading-none flex items-center p-2 ">
+          <div className="relative">
+            <p className="font-semibold text-gray-600 leading-none my-1">
+              {name}
+            </p>
+            <p className="font-medium text-sm text-gray-400">
+              <div classNameName="  text-xl font-semibold rounded-xl   leading-none flex items-center p-2 ">
                 {[...Array(stars)].map((e, i) => (
-                  <span className="text-blue-500  " key={i}>
+                  <span classNameName="text-blue-500  " key={i}>
                     ★
                   </span>
                 ))}
@@ -24,7 +26,7 @@ export default function Reviewcard({ stars, title, review, name }) {
         {review}
         <br />
         <svg
-          class="h-auto absolute z-0 top-0 right-0 w-12 opacity-30 mt-6 mr-7 text-gray-200"
+          className="h-auto absolute z-0 top-0 right-0 w-12 opacity-30 mt-6 mr-7 text-gray-200"
           fill="currentColor"
           viewBox="0 0 32 32"
           aria-hidden="true"

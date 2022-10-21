@@ -189,7 +189,7 @@ export function PrimaryFeatures({
                                         />
                                       </Disclosure.Button>
                                       <Disclosure.Panel className="px-4 pt-4 pb-2 text-xl lg:text-2xl text-white ">
-                                        "answer"
+                                        &quot;answer&quot;
                                       </Disclosure.Panel>
                                     </>
                                   )}
