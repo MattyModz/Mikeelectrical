@@ -1,6 +1,6 @@
 // import { Reviews } from "../../../typings";
 
-import { urlFor } from "../../../sanity";
+// import { urlFor } from "../../../sanity";
 function Reviews({ stars, title, review, name, img }) {
   return (
     <div className="w-full max-w-sm mx-10 px-6  mb-8  mx-auto bg-white  rounded-xl shadow-md ">
