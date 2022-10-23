@@ -48,7 +48,7 @@ const resources = [
     name: "Reviews",
     description:
       "Learn how to maximize our platform to get the most out of it.",
-    href: "/#review",
+    href: "/#reviews",
     icon: ChatIcon,
   },
   {
