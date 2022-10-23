@@ -8,6 +8,11 @@ export default {
       title: "Name",
       type: "string",
     },
+    {
+      name: "reviewimg",
+      title: "Reviewimg",
+      type: "image",
+    },
 
     {
       name: "stars",

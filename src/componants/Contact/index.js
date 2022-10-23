@@ -34,7 +34,7 @@ const Contact = () => {
         whileInView={{ opacity: 1, y: 0, transition: { duration: 1 } }}
         viewport={{ once: true }}
       >
-        <div className="relative px-4 mx-auto max-w-7xl">
+        <div className="relative px-4 container ">
           <div className="relative  items-center   p-6 overflow-hidden shadow-2xl   bg-gradient-to-r from-blue-500 to-blue-600 rounded-2xl  ">
             <div className="absolute top-0 right-0">
               <svg
@@ -50,9 +50,10 @@ const Contact = () => {
                 ></path>
               </svg>
             </div>
-            <h1 className="text-white font-bold  text-center lg:text-6xl text-4xl">
+            <h1 className="text-white font-bold  text-center lg:text-6xl text-5xl">
               Get in touch
             </h1>
+
             <div className="flex justify-center p-6 mt-4  bg-gray-50/20 rounded-xl">
               <Image src={"/IPAF.png"} width={150} height={75} />
               <Image src={"/Nic cert.svg"} width={150} height={75} />

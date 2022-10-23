@@ -15,26 +15,15 @@ export default function Home({
   planninglist,
   industriallist,
 }) {
-  const indarray = industriallist.map((a) => a.service);
-
-  const domarray = domesticlist.map((a) => a.service);
-  const projarray = planninglist.map((a) => a.service);
-  const indarraydes = industriallist.map((a) => a.description);
-
-  const domarraydes = domesticlist.map((a) => a.description);
-  const projarraydes = planninglist.map((a) => a.description);
-  console.log(faq);
+  console.log(domesticlist);
   return (
     <>
       <Index />
       <div id="services">
         <PrimaryFeatures
-          indus={indarray}
-          indusdesc={indarraydes}
-          plandesc={projarraydes}
-          plan={projarray}
-          domdesc={domarraydes}
-          dom={domarray}
+          indus={domesticlist}
+          plan={planninglist}
+          dom={industriallist}
         />
       </div>
       <div id="about">
@@ -82,6 +71,7 @@ slug
   review,
   stars,
   name,
+  reviewimg
 
 }`;
 

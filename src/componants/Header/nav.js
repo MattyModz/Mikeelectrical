@@ -93,7 +93,7 @@ export default function Example() {
           </div>
 
           <div as="nav" className="hidden md:flex space-x-10 items-center ">
-            <span className=" m:hidden blackspace-nowrap inline-flex items-center justify-center px-4 py-2 rounded-md shadow-sm text-base font-medium text-black  hover:bg-black hover:bg-opacity-30 mr-2">
+            <span className=" m:hidden blackspace-nowrap inline-flex items-center justify-center px-4 py-2 rounded-md shadow-sm text-base font-medium text-black  hover:bg-blue-600 hover:text-white mr-2">
               <NavLink className="scroll-smooth" href="#services">
                 Services
               </NavLink>
@@ -101,13 +101,13 @@ export default function Example() {
 
             <a
               href="#about"
-              className=" m:hidden blackspace-nowrap inline-flex items-center justify-center px-4 py-2 rounded-md shadow-sm text-base font-medium text-black  hover:bg-black hover:bg-opacity-30 mr-2 "
+              className=" m:hidden blackspace-nowrap inline-flex items-center justify-center px-4 py-2 rounded-md shadow-sm text-base font-medium text-black  hover:bg-blue-600 hover:text-white mr-2 "
             >
               About
             </a>
 
             <a href="#blog">
-              <span className=" m:hidden blackspace-nowrap inline-flex items-center justify-center px-4 py-2 rounded-md shadow-sm text-base font-medium text-black  hover:bg-black hover:bg-opacity-30 mr-2">
+              <span className=" m:hidden blackspace-nowrap inline-flex items-center justify-center px-4 py-2 rounded-md shadow-sm text-base font-medium text-black  hover:bg-blue-600 hover:text-white mr-2">
                 Blog
               </span>
             </a>
@@ -115,13 +115,13 @@ export default function Example() {
           <div className="hidden md:flex items-center justify-end md:flex-1 lg:w-0 sm:hidden">
             <a
               href="#contact"
-              className=" m:hidden blackspace-nowrap inline-flex items-center justify-center px-4 py-2 rounded-md shadow-sm text-base font-medium text-black  hover:bg-black hover:bg-opacity-30 mr-2"
+              className=" m:hidden blackspace-nowrap inline-flex items-center justify-center px-4 py-2 rounded-md shadow-sm text-base font-medium text-black  hover:bg-blue-600 hover:text-white mr-2"
             >
               Contact
             </a>
             <a
               href=""
-              className="m:hidden blackspace-nowrap inline-flex items-center justify-center px-4 py-2 rounded-md shadow-sm text-base font-medium text-black  hover:bg-black hover:bg-opacity-30 mr-2"
+              className="bg-blue-600 text-white m:hidden blackspace-nowrap inline-flex items-center justify-center px-4 py-2 rounded-md shadow-sm text-base font-medium text-black  hover:bg-blue-600 hover:text-white mr-2"
             >
               07909588291
             </a>

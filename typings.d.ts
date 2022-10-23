@@ -28,3 +28,17 @@ export interface Terms {
   };
   body: [object];
 }
+
+export interface Reviews {
+  _id: string;
+  name: string;
+  stars: string;
+  title: string;
+  review: string;
+
+  reviewimg: {
+    asset: {
+      url: string;
+    };
+  };
+}

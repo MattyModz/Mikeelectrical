@@ -34,7 +34,6 @@ export function PrimaryFeatures({
       image4: D4,
 
       test: dom,
-      itemdescription: domdesc,
     },
 
     {
@@ -43,7 +42,6 @@ export function PrimaryFeatures({
       image: screenshotVatReturns,
 
       test: indus,
-      itemdescription: indusdesc,
     },
 
     {
@@ -52,7 +50,6 @@ export function PrimaryFeatures({
       image: screenshotReporting,
 
       test: plan,
-      itemdescription: plandesc,
     },
   ];
 
@@ -152,7 +149,7 @@ export function PrimaryFeatures({
                       </p>
                     </div>
                     <motion.div
-                      className="mt-10 w-[45rem] overflow-hidden rounded-xl shadow-xl shadow-blue-900/20 sm:w-auto lg:mt-0 lg:w-[67.8125rem]"
+                      className="mt-10  rounded-xl shadow-xl shadow-blue-900/20 sm:w-auto lg:mt-0 lg:w-[67.8125rem]"
                       initial={{ opacity: 0, x: 0 }}
                       whileInView={{
                         opacity: 1,
@@ -169,10 +166,6 @@ export function PrimaryFeatures({
                                 whileInView={{
                                   opacity: 1,
                                   x: 0,
-                                  transition: {
-                                    duration: 1,
-                                    delay: index * 0.1,
-                                  },
                                 }}
                                 viewport={{ once: false }}
                               >
@@ -180,7 +173,7 @@ export function PrimaryFeatures({
                                   {({ open }) => (
                                     <>
                                       <Disclosure.Button className="flex w-full justify-between rounded-lg  px-4 py-2 text-left text-l font-medium text-white  focus:outline-none focus-visible:ring focus-visible:ring-orange-500 focus-visible:ring-opacity-75">
-                                        {item}
+                                        {item.service}
 
                                         <ChevronRightIcon
                                           className={`${
@@ -188,8 +181,10 @@ export function PrimaryFeatures({
                                           } h-5 w-5 text-white`}
                                         />
                                       </Disclosure.Button>
-                                      <Disclosure.Panel className="px-4 pt-4 pb-2 text-xl lg:text-2xl text-white ">
-                                        &quot;answer&quot;
+                                      <Disclosure.Panel className=" font-normal    text-white ">
+                                        <li className="p-4">
+                                          {item.description}
+                                        </li>
                                       </Disclosure.Panel>
                                     </>
                                   )}
