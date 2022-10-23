@@ -6,15 +6,15 @@ function Reviews({ stars, title, review, name, img }) {
     <div className="w-full max-w-sm mx-10 px-6  mb-8  mx-auto bg-white  rounded-xl shadow-md ">
       <div>
         <div className="flex items-center border-b relative border-gray-100 border-solid pb-5 mb-5">
-          <div>
+          <div className="rounded-full mr-3 w-12 h-12 ">
             {" "}
             <img
-              className="rounded-full mr-3 w-12 h-12"
+              className="rounded-full"
               src={urlFor(img).url()!}
               alt=""
               width={50}
               height={50}
-            />{" "}
+            />
           </div>
 
           <div className="relative">
