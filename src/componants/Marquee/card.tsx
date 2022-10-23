@@ -1,13 +1,13 @@
-// import { Reviews } from "../../../typings";
+// import {
 
-// import { urlFor } from "../../../sanity";
-function Reviews({ stars, title, review, name, img }) {
+//   urlFor,
+
+// } from "../../sanity";
+export default function Reviewcard({ stars, title, review, name, img }) {
   return (
-    <div className="w-full max-w-sm mx-10 px-6  mb-8  mx-auto bg-white  rounded-xl shadow-md ">
+    <div className="w-full max-w-sm mx-10 px-6 py-8 mb-8  mx-auto bg-white  rounded-xl shadow-md ">
       <div>
         <div className="flex items-center border-b relative border-gray-100 border-solid pb-5 mb-5">
-          <div className="rounded-full mr-3 w-12 h-12 "> </div>
-
           <div className="relative">
             <p className="font-semibold text-gray-600 leading-none my-1">
               {name}
@@ -35,4 +35,3 @@ function Reviews({ stars, title, review, name, img }) {
     </div>
   );
 }
-export default Reviews;
