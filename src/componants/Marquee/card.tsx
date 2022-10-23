@@ -24,8 +24,7 @@ export default function Reviewcard({ stars, title, review, name, img }) {
           </div>
         </div>
         <div className="font-bold pb-4 text-xl">{title}</div>
-        {review}
-        <br />
+        <div> {review}</div>
       </div>
 
       <div>
