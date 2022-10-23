@@ -3,7 +3,7 @@
 //   urlFor,
 
 // } from "../../sanity";
-export default function Reviewcard({ stars, title, review, name, img }) {
+export default function Reviewcard({ stars, title, review, name }) {
   return (
     <div className="w-full max-w-sm mx-10 px-6 py-8 mb-8  mx-auto bg-white  rounded-xl shadow-md ">
       <div>

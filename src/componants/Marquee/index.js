@@ -20,7 +20,6 @@ export default function Reviews({ reviews }) {
                   stars={review.stars}
                   name={review.name}
                   review={review.review}
-                  img={review.reviewimg}
                 />
               );
             })}

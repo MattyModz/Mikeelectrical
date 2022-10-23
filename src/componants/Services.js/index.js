@@ -181,7 +181,7 @@ export function PrimaryFeatures({
                                           } h-5 w-5 text-white`}
                                         />
                                       </Disclosure.Button>
-                                      <Disclosure.Panel className=" font-normal    text-white ">
+                                      <Disclosure.Panel className=" font-normal text-sm   text-white ">
                                         <li className="p-4">
                                           {item.description}
                                         </li>
