@@ -32,7 +32,11 @@ export default function Reviewcard({ stars, title, review, name, img }) {
         {review}
         <br />
       </div>
-
+      <div className="flex justify-end py-2">
+        <a href="https://www.facebook.com/mikewireelectrical/reviews">
+          <Image src={"/facebook.svg"} height={25} width={25} />
+        </a>
+      </div>
       <div>
         <div className="flex items-center mt-2 " />
         <span className="text-white font-bold">{name}</span>
