@@ -219,7 +219,7 @@ export default function Example() {
                         : " text-blue-600"
                     }`}
                   >
-                    Leave a reviews
+                    Leave a review
                   </a>
                 </p>
               </div>
