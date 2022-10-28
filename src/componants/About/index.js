@@ -1,14 +1,18 @@
 import React from "react";
-
+import Image from "next/image";
 function index() {
   return (
     <section className="py-10 bg-white sm:py-16 lg:py-24">
       <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
         <div className="grid items-center grid-cols-1 lg:grid-cols-2 gap-x-12 xl:gap-x-24 gap-y-12">
           <div className="relative lg:mb-12 ">
-            <div className="pl-12 pr-6  p-8">
-              <img className="relative" src="MikeRitchie.jpg" alt="" />
+            <div className=" p-8">
+              <img className="relative" src="logoicon.svg" alt="" />
             </div>
+            {/* <div className="flex justify-center p-6 mt-4  bg-gray-50/20 rounded-xl">
+              <Image src={"/IPAF.png"} width={150} height={75} />
+              <Image src={"/Nic cert.svg"} width={150} height={75} />
+            </div> */}
           </div>
 
           <div className="2xl:pl-16">

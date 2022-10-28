@@ -26,7 +26,7 @@ export function PrimaryFeatures({
   const features = [
     {
       title: "Domestic",
-      description: "Domestic electrical enginerring services we offer",
+      description: "Domestic electrical engineering services we offer",
       image1: D1,
       image2: D2,
       image3: D3,
@@ -38,7 +38,7 @@ export function PrimaryFeatures({
 
     {
       title: "Industrial",
-      description: "Industrial electrical enginerring services we offer",
+      description: "Industrial electrical engineering services we offer",
       image: screenshotVatReturns,
 
       test: indus,
@@ -46,7 +46,7 @@ export function PrimaryFeatures({
 
     {
       title: "Commercial",
-      description: "Commercial electrical enginerring services we offer",
+      description: "Commercial electrical engineering services we offer",
       image: screenshotReporting,
 
       test: plan,
