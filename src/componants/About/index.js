@@ -1,5 +1,5 @@
 import React from "react";
-import Image from "next/image";
+// import Image from "next/image";
 function index() {
   return (
     <section className="py-10 bg-white sm:py-16 lg:py-24">

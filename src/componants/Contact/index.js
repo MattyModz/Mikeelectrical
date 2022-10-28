@@ -3,7 +3,7 @@ import axios from "axios";
 import { useState } from "react";
 import { motion } from "framer-motion";
 import Submit from "./submit";
-import Image from "next/image";
+// import Image from "next/image";
 const Contact = () => {
   const { register, handleSubmit } = useForm();
   const [formStatus, setFormStatus] = useState(false);
