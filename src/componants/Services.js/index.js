@@ -33,7 +33,7 @@ export function PrimaryFeatures({
 
       image4: D4,
 
-      test: dom,
+      test: indus,
     },
 
     {
@@ -41,7 +41,7 @@ export function PrimaryFeatures({
       description: "Industrial electrical engineering services we offer",
       image: screenshotVatReturns,
 
-      test: indus,
+      test: dom,
     },
 
     {
