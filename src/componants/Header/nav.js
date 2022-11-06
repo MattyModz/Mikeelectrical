@@ -202,10 +202,10 @@ export default function Example() {
               </div>
               <div>
                 <a
-                  href="#contact"
+                  href=""
                   className="w-full flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-blue-600   "
                 >
-                  Request a quote
+                  07909588291
                 </a>
                 <p className="mt-6 text-center text-base font-medium text-gray-500">
                   Happy with our service?{" "}
