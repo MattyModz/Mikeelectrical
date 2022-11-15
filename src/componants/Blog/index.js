@@ -21,7 +21,7 @@ export default function Blogcard({ posts }) {
                   href={`/post/${post.slug.current}`}
                   passHref
                 >
-                  <img
+                  <Image
                     src={urlFor(post.mainImage).url()}
                     alt=""
                     width={500}
