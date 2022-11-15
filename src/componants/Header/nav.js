@@ -202,7 +202,7 @@ export default function Example() {
               </div>
               <div>
                 <div className="w-full flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-blue-600   ">
-                  <a href="tel:07909588291">07912882644</a>
+                  <a href="tel:07912882644">07912882644</a>
                 </div>
                 <p className="mt-6 text-center text-base font-medium text-gray-500">
                   Happy with our service?{" "}
