@@ -2,6 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { urlFor } from "../../../sanity";
 import Link from "next/link";
+import Image from "next/image";
 export default function Blogcard({ posts }) {
   return (
     <section className=" text-black bg-body-dark font-inerr p-4 mb-8">
@@ -71,7 +72,7 @@ export default function Blogcard({ posts }) {
               viewport={{ once: true }}
             >
               <Link key={post._id} href={`/post/${post.slug.current}`} passHref>
-                <img
+                <Image
                   src={urlFor(post.mainImage).url()}
                   alt=""
                   width={500}
