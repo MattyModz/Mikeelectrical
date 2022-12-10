@@ -10,17 +10,17 @@ import Faq from "../src/componants/Faq's/index";
 
 export default function Home({ data }) {
   const domestic = data.filter((doc) => doc._type === "domestic");
-  const commercial = data.filter((doc) => doc._type === "commercial");
+  const commercial = data.filter((doc) => doc._type === "planning");
   const industrial = data.filter((doc) => doc._type === "industrial");
   const posts = data.filter((doc) => doc._type === "post");
   const reviews = data.filter((doc) => doc._type === "reviews");
-  const faq = data.filter((doc) => doc._type === "FAQ");
-  console.log(posts);
+  const faq = data.filter((doc) => doc._type === "faq");
+  console.log(faq);
   return (
     <>
       <Index />
       <div id="services">
-        <PrimaryFeatures indus={industrial} plan={commercial} dom={domestic} />
+        <PrimaryFeatures indus={domestic} plan={commercial} dom={industrial} />
       </div>
       <About />
       <div id="reviews">
@@ -46,7 +46,7 @@ export default function Home({ data }) {
 }
 
 export const getServerSideProps = async () => {
-  const query = `*[_type in ["domestic", "commercial", "industrial", "post", "reviews", "FAQ"]]`;
+  const query = `*[_type in ["domestic", "planning", "industrial", "post", "reviews", "faq"]]`;
   const data = await sanityClient.fetch(query);
 
   return {
