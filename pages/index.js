@@ -15,7 +15,7 @@ export default function Home({ data }) {
   const posts = data.filter((doc) => doc._type === "post");
   const reviews = data.filter((doc) => doc._type === "reviews");
   const faq = data.filter((doc) => doc._type === "faq");
-  console.log(faq);
+
   return (
     <>
       <Index />
