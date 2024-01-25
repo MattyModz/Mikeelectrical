@@ -1,25 +1,25 @@
-// import nodemailer from "nodemailer";
+import nodemailer from "nodemailer";
+
+const transporter = nodemailer.createTransport({
+  host: "smtp-mail.outlook.com",
+  secure: false,
+  port: 587,
+  auth: {
+    user: "mikewire@hotmail.com",
+    pass: "20Birleystreet!",
+  },
+  requireTLS: true,
+  tls: {
+    ciphers: "SSLv3",
+    rejectUnauthorized: false,
+  },
+  debug: true,
+  logger: true,
+});
 
 export default async function handler(req, res) {
-  // const { fullName, Message, SenderEmail } = req.body;
-
-  // const transporter = nodemailer.createTransport({
-  //   host: "smtp-mail.outlook.com", // hostname
-
-  //   secure: false,
-  //   port: 587, // port for secure SMTP
-  //   auth: {
-  //     user: "mikewire@hotmail.com",
-  //     pass: "20Birleystreet!",
-  //   },
-  //   requireTLS: true,
-  //   tls: {
-  //     ciphers: "SSLv3",
-  //     rejectUnauthorized: false,
-  //   },
-  //   debug: true,
-  //   logger: true,
-  // });
+  const { fullName, Message, SenderEmail } = req.body;
+  console.log(fullName);
 
   // try {
   //   const emailRes = await transporter.sendMail({
@@ -29,7 +29,6 @@ export default async function handler(req, res) {
   //     html: `<p>You have a new contact form submission</p><br>
   //      <p><strong>Email: </strong> ${SenderEmail} </p><br>
   //     <p><strong>Name: </strong> ${fullName} </p><br>
-
   //      <p><strong>Message: </strong> ${Message} </p><br>
   //      `,
   //   });
@@ -39,8 +38,5 @@ export default async function handler(req, res) {
   //   console.error("Error sending email:", err);
   //   res.status(500).json({ error: "Internal Server Error" });
   // }
-
-  console.log("Entered the serverless function");
-
-  return res.status(200).json("Email sent successfully");
+  res.status(200).json({ message: "Email sent successfully" });
 }
