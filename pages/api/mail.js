@@ -1,4 +1,4 @@
-import nodemailer from "nodemailer";
+// import nodemailer from "nodemailer";
 
 export default async function handler(req, res) {
   // const { fullName, Message, SenderEmail } = req.body;
