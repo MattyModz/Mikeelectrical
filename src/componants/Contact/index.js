@@ -17,7 +17,7 @@ const Contact = () => {
 
     const config = {
       method: "post",
-      url: `${process.env.NEXT_PUBLIC_API_URL}/api/mail`,
+      url: `https://www.mikewire-electrical.co.uk/api/mail`,
       headers: {
         "Content-Type": "application/json",
       },

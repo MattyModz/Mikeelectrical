@@ -5,16 +5,16 @@ export default async function handler(req, res) {
 
   const transporter = nodemailer.createTransport({
     host: "smtp.office365.com", // hostname
-    secureConnection: false, // TLS requires secureConnection to be false
+
     secure: false,
     port: 587, // port for secure SMTP
-    requireTLS: true,
-    tls: {
-      ciphers: "SSLv3",
-    },
     auth: {
       user: process.env.user,
       pass: process.env.pass,
+    },
+    requireTLS: true,
+    tls: {
+      ciphers: "SSLv3",
     },
   });
 
@@ -31,9 +31,9 @@ export default async function handler(req, res) {
        `,
     });
     console.log("Message Sent", emailRes.messageId);
+    res.status(200).json({ message: "Email sent successfully" });
   } catch (err) {
-    console.log(err);
+    console.error("Error sending email:", err);
+    res.status(500).json({ error: "Internal Server Error" });
   }
-
-  res.status(200).json(req.body);
 }
