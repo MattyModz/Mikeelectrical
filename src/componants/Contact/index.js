@@ -1,4 +1,3 @@
-import { useForm } from "react-hook-form";
 import axios from "axios";
 import { useState } from "react";
 import { motion } from "framer-motion";
@@ -6,22 +5,25 @@ import Submit from "./submit";
 // import { Button } from "../ui/Button,js";
 import { toast } from "react-hot-toast";
 // import Image from "next/image";
-const Contact = () => {
-  const { register, handleSubmit } = useForm();
+export default function Contact() {
   const [formStatus, setFormStatus] = useState(false);
   const [loading, setLoading] = useState(false);
+  const [formValues, setFormValues] = useState({
+    fullName: "",
+    senderEmail: "",
+    message: "",
+  });
 
-  const onSubmitForm = async (values, event) => {
-    event.preventDefault();
+  const handleSubmit = async () => {
     setLoading(true);
 
     const config = {
       method: "post",
-      url: `https://www.mikewire-electrical.co.uk/api/mail`,
+      url: `${process.env.NEXT_PUBLIC_API_URL}/api/mail`,
       headers: {
         "Content-Type": "application/json",
       },
-      data: values,
+      data: formValues,
     };
 
     try {
@@ -41,6 +43,14 @@ const Contact = () => {
     } finally {
       setLoading(false);
     }
+  };
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormValues((prevValues) => ({
+      ...prevValues,
+      [name]: value,
+    }));
   };
 
   return (
@@ -75,52 +85,56 @@ const Contact = () => {
             <section className=" py-8">
               <div className="">
                 <form
-                  onSubmit={handleSubmit(onSubmitForm)}
+                  onSubmit={handleSubmit}
                   className="grid max-w-3xl gap-4 mx-auto "
                   style={formStatus ? { display: "none" } : { display: "" }}
                 >
                   <div className="sm:col-span-2">
                     <label
-                      htmlFor="first-name"
+                      htmlFor="full-name"
                       className="inline-block mb-2 text-sm font-medium text-gray-500 sm:text-base"
                     ></label>
                     <input
-                      {...register("fullName", { required: true })}
+                      type="text"
+                      name="fullName"
                       placeholder="Name"
+                      value={formValues.fullName}
+                      onChange={handleChange}
                       className="w-full px-3 py-2 text-gray-800 transition duration-100 border rounded-md outline-none bg-gray-50 focus:ring ring-blue-300"
                     />
                   </div>
 
+                  {/* Input for Email */}
                   <div className="sm:col-span-2">
                     <label
-                      htmlFor="Email"
+                      htmlFor="sender-email"
                       className="inline-block mb-2 text-sm font-medium text-gray-500 sm:text-base"
                     ></label>
                     <input
+                      type="email"
+                      name="senderEmail"
                       placeholder="Email"
-                      {...register("SenderEmail", { required: true })}
+                      value={formValues.senderEmail}
+                      onChange={handleChange}
                       className="w-full px-3 py-2 text-gray-800 transition duration-100 border rounded-md outline-none bg-gray-50 focus:ring ring-blue-300"
                     />
                   </div>
 
+                  {/* Textarea for Message */}
                   <div className="sm:col-span-2">
                     <label
                       htmlFor="message"
                       className="inline-block mb-2 text-sm font-medium text-gray-500 sm:text-base"
                     ></label>
                     <textarea
+                      name="message"
                       placeholder="How can we help you"
-                      {...register("Message", { required: true })}
+                      value={formValues.message}
+                      onChange={handleChange}
                       className="w-full h-64 px-3 py-2 text-gray-800 transition duration-100 border rounded-md outline-none bg-gray-50 focus:ring ring-blue-300"
                     ></textarea>
                   </div>
 
-                  {/* <Button
-                    type="submit"
-                    className="sm:col-span-2 inline-block px-8 py-3 text-sm font-semibold text-center text-white transition duration-100 rounded-md outline-none bg-blue-400 md:text-base"
-                  >
-                    Submit
-                  </Button> */}
                   <button
                     type="submit"
                     className={`relative flex items-center justify-center sm:col-span-2 inline-flex px-8 py-3 text-sm font-semibold text-center text-white transition duration-100 rounded-md outline-none bg-blue-400 md:text-base ${
@@ -138,6 +152,7 @@ const Contact = () => {
                   </button>
                 </form>
               </div>
+
               <div style={formStatus ? { display: "" } : { display: "none" }}>
                 <motion.h2
                   className="text-white text-5xl font-bold flex justify-center"
@@ -158,6 +173,4 @@ const Contact = () => {
       </motion.section>
     </div>
   );
-};
-
-export default Contact;
+}
