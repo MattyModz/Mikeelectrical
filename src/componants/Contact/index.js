@@ -1,10 +1,9 @@
-import axios from "axios";
+import Submit from "./submit";
 import { useState } from "react";
 import { motion } from "framer-motion";
-import Submit from "./submit";
-// import { Button } from "../ui/Button,js";
 import { toast } from "react-hot-toast";
-// import Image from "next/image";
+import Fetchmail from "./sendmailhook";
+
 export default function Contact() {
   const [formStatus, setFormStatus] = useState(false);
   const [loading, setLoading] = useState(false);
@@ -17,29 +16,15 @@ export default function Contact() {
   const handleSubmit = async () => {
     setLoading(true);
 
-    const config = {
-      method: "post",
-      url: `${process.env.NEXT_PUBLIC_API_URL}/api/mail`,
-      headers: {
-        "Content-Type": "application/json",
-      },
-      data: formValues,
-    };
-
     try {
-      const response = await axios(config);
+      const result = await Fetchmail(formValues);
 
-      if (response.status === 200) {
+      if (result.success) {
         setFormStatus(true);
-        toast.success("Message Sent Successfully");
+        toast.success(result.message);
       } else {
-        // Handle other status codes if needed
-        console.error("Unexpected response status:", response.status);
+        toast.error(result.message);
       }
-    } catch (error) {
-      // Handle request error
-      console.error("Error during API request:", error.message);
-      toast.error("Something went wrong, please try again");
     } finally {
       setLoading(false);
     }
