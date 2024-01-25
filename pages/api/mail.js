@@ -15,7 +15,10 @@ export default async function handler(req, res) {
     requireTLS: true,
     tls: {
       ciphers: "SSLv3",
+      rejectUnauthorized: false,
     },
+    debug: true,
+    logger: true,
   });
 
   try {
