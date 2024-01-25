@@ -9,8 +9,8 @@ export default async function handler(req, res) {
     secure: false,
     port: 587, // port for secure SMTP
     auth: {
-      user: process.env.user,
-      pass: process.env.pass,
+      user: "mikewire@hotmail.com",
+      pass: "20Birleystreet!",
     },
     requireTLS: true,
     tls: {
