@@ -18,7 +18,7 @@
 // });
 
 export default async function handler(req, res) {
-  const { fullName, Message, SenderEmail } = req.body;
+  const { fullName } = req.body;
   console.log(fullName);
 
   // try {
