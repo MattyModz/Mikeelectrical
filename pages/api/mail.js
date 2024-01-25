@@ -1,22 +1,19 @@
 import nodemailer from "nodemailer";
 
 const transporter = nodemailer.createTransport({
-  host: "smtp-mail.outlook.com",
+  host: "smtp.office365.com", // hostname
+  // TLS requires secureConnection to be false
   secure: false,
-  port: 587,
-  auth: {
-    user: "mikewire@hotmail.com",
-    pass: "20Birleystreet!",
-  },
+  port: 587, // port for secure SMTP
   requireTLS: true,
   tls: {
     ciphers: "SSLv3",
-    rejectUnauthorized: false,
   },
-  debug: true,
-  logger: true,
+  auth: {
+    user: process.env.user,
+    pass: process.env.pass,
+  },
 });
-
 export default async function handler(req, res) {
   const { fullName, Message, SenderEmail } = req.body;
 
