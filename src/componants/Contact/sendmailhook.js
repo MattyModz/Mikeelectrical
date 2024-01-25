@@ -1,4 +1,4 @@
-export default async function Fetchmail(formValues) {
+export default async function fetchmail(formValues) {
   const url = `${process.env.NEXT_PUBLIC_API_URL}/api/mail`;
 
   try {

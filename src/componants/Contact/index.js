@@ -2,7 +2,7 @@ import Submit from "./submit";
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { toast } from "react-hot-toast";
-import Fetchmail from "./sendmailhook";
+import fetchmail from "./sendmailhook";
 
 export default function Contact() {
   const [formStatus, setFormStatus] = useState(false);
@@ -17,7 +17,7 @@ export default function Contact() {
     setLoading(true);
 
     try {
-      const result = await Fetchmail(formValues);
+      const result = await fetchmail(formValues);
 
       if (result.success) {
         setFormStatus(true);
