@@ -1,5 +1,5 @@
 export default async function fetchmail(formValues) {
-  const url = `${process.env.NEXT_PUBLIC_API_URL}/api/mail`;
+  const url = `https://www.mikewire-electrical.co.uk/api/mail`;
 
   try {
     const response = await fetch(url, {
