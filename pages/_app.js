@@ -9,6 +9,20 @@ function MyApp({ Component, pageProps, router }) {
       <Header />
 
       <AnimatePresence exitBeforeEnter>
+        <>
+          {/* <script
+            dangerouslySetInnerHTML={{
+              __html: `
+          (function(){
+            var s = document.createElement("script");
+            s.setAttribute("data-account","CeglA0oqvN");
+            s.setAttribute("src","https://cdn.userway.org/widget.js");
+            document.body.appendChild(s);
+          })();
+        `,
+            }}
+          /> */}
+        </>
         <Component {...pageProps} key={router.route} />
       </AnimatePresence>
       <Footer />

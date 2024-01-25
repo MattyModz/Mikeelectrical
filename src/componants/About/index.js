@@ -26,12 +26,12 @@ function index() {
               Qualified, affordable and professional electrical engineering.
             </h2>
             <p className="text-xl leading-relaxed text-gray-900 mt-9">
-              No job to big or small, Mike wire electrical are a team of fully
+              No job too big or small, Mike Wire Electrical are a team of fully
               qualified electrical engineers with decades expirience in
               electrical engineering
             </p>
             <p className="mt-6 text-xl leading-relaxed text-gray-900">
-              View some of the work we have completed in our gallary, or get in
+              View some of the work we have completed in our gallery, or get in
               touch with us to discuss a job.
             </p>
           </div>

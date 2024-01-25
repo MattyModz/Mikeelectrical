@@ -17,6 +17,20 @@ export default function Document(props) {
           rel="stylesheet"
           href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Lexend:wght@400;500&display=swap"
         />
+        <>
+          {/* <script
+            dangerouslySetInnerHTML={{
+              __html: `
+                  (function(){
+                    var s = document.createElement("script");
+                    s.setAttribute("data-account","CeglA0oqvN");
+                    s.setAttribute("src","https://cdn.userway.org/widget.js");
+                    document.body.appendChild(s);
+                  })();
+                `,
+            }}
+          /> */}
+        </>
       </Head>
       <body className="flex h-full flex-col">
         <Main />

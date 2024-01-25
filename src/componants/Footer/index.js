@@ -34,7 +34,7 @@ function Footer() {
               href="#gallary"
               className="box-border items-center block w-full px-4 text-base font-normal leading-normal text-gray-900 no-underline border-solid cursor-pointer hover:text-blue-600 focus-within:text-blue-700 sm:px-0 sm:text-left"
             >
-              Gallary
+              Gallery
             </Link>
           </li>
           <li className="relative mt-2 leading-7 text-left text-gray-900 border-0 border-gray-200 md:border-b-0 md:mt-0">

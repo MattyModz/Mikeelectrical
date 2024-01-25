@@ -7,7 +7,8 @@ import Submit from "./submit";
 const Contact = () => {
   const { register, handleSubmit } = useForm();
   const [formStatus, setFormStatus] = useState(false);
-  async function onSubmitForm(values) {
+  async function onSubmitForm(values, event) {
+    event.preventDefault();
     const config = {
       method: "post",
       url: `${process.env.NEXT_PUBLIC_API_URL}/api/mail`,
@@ -61,7 +62,7 @@ const Contact = () => {
                   className="grid max-w-3xl gap-4 mx-auto "
                   style={formStatus ? { display: "none" } : { display: "" }}
                 >
-                  <div>
+                  <div className="sm:col-span-2">
                     <label
                       htmlFor="first-name"
                       className="inline-block mb-2 text-sm font-medium text-gray-500 sm:text-base"
@@ -97,12 +98,12 @@ const Contact = () => {
                     ></textarea>
                   </div>
 
-                  <div className="flex items-center justify-between sm:col-span-2 mb-8">
-                    <input
-                      type="submit"
-                      className=" inline-block px-8 py-3 text-sm font-semibold text-center text-white transition duration-100 rounded-md outline-none bg-blue-400 md:text-base"
-                    />
-                  </div>
+                  <button
+                    type="submit"
+                    className="sm:col-span-2 inline-block px-8 py-3 text-sm font-semibold text-center text-white transition duration-100 rounded-md outline-none bg-blue-400 md:text-base"
+                  >
+                    Submit
+                  </button>
                 </form>
               </div>
               <div style={formStatus ? { display: "" } : { display: "none" }}>
