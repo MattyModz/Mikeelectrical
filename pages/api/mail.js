@@ -4,8 +4,8 @@ export default async function handler(req, res) {
   const { fullName, Message, SenderEmail } = req.body;
 
   const transporter = nodemailer.createTransport({
-    host: "smtp.office365.com", // hostname
-    service: "Outlook365",
+    host: "smtp-mail.outlook.com", // hostname
+
     secure: false,
     port: 587, // port for secure SMTP
     auth: {
