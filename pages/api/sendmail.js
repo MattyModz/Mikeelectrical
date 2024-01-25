@@ -1,6 +1,6 @@
 import nodemailer from "nodemailer";
 
-export default async function handler(req, res) {
+export default async (req, res) => {
   const { fullName, Message, SenderEmail } = req.body;
 
   const transporter = nodemailer.createTransport({
@@ -56,4 +56,4 @@ export default async function handler(req, res) {
   });
 
   res.status(200).json({ status: "OK" });
-}
+};
