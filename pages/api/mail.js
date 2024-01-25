@@ -1,23 +1,37 @@
 import nodemailer from "nodemailer";
 
-const transporter = nodemailer.createTransport({
-  host: "smtp.office365.com", // hostname
-  // TLS requires secureConnection to be false
-  secure: false,
-  port: 587, // port for secure SMTP
-  requireTLS: true,
-  tls: {
-    ciphers: "SSLv3",
-  },
-  auth: {
-    user: process.env.user,
-    pass: process.env.pass,
-  },
-});
 export default async function handler(req, res) {
   const { fullName, Message, SenderEmail } = req.body;
 
-  const emailtemp = {
+  const transporter = nodemailer.createTransport({
+    host: "smtp.office365.com", // hostname
+    // TLS requires secureConnection to be false
+    secure: false,
+    port: 587, // port for secure SMTP
+    requireTLS: true,
+    tls: {
+      ciphers: "SSLv3",
+    },
+    auth: {
+      user: process.env.user,
+      pass: process.env.pass,
+    },
+  });
+
+  await new Promise((resolve, reject) => {
+    // verify connection configuration
+    transporter.verify(function (error, success) {
+      if (error) {
+        console.log(error);
+        reject(error);
+      } else {
+        console.log("Server is ready to take our messages");
+        resolve(success);
+      }
+    });
+  });
+
+  const mailData = {
     from: "mikewire@hotmail.com",
     to: "mikewire@hotmail.com",
     subject: `Contact form submission from ${fullName}`,
@@ -28,19 +42,18 @@ export default async function handler(req, res) {
        `,
   };
 
-  try {
-    const emailRes = await transporter.sendMail(emailtemp);
-    console.log("Message Sent", emailRes.messageId);
-    res.status(200).json({ message: "Email sent successfully" });
-  } catch (err) {
-    console.error("Error sending email:", err);
+  await new Promise((resolve, reject) => {
+    // send mail
+    transporter.sendMail(mailData, (err, info) => {
+      if (err) {
+        console.error(err);
+        reject(err);
+      } else {
+        console.log(info);
+        resolve(info);
+      }
+    });
+  });
 
-    if (err.response) {
-      res.status(400).json({
-        error: "Failed to send email. Check email content and recipients.",
-      });
-    } else {
-      res.status(500).json({ error: "Internal Server Error" });
-    }
-  }
+  res.status(200).json({ status: "OK" });
 }
