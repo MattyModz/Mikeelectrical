@@ -2,7 +2,7 @@ import "../src/styles/index.scss";
 import { AnimatePresence } from "framer-motion";
 import Footer from "../src/componants/Footer/index";
 import Header from "../src/componants/Header/header";
-
+import { Toaster } from "react-hot-toast";
 function MyApp({ Component, pageProps, router }) {
   return (
     <div>
@@ -23,6 +23,7 @@ function MyApp({ Component, pageProps, router }) {
             }}
           /> */}
         </>
+        <Toaster />
         <Component {...pageProps} key={router.route} />
       </AnimatePresence>
       <Footer />

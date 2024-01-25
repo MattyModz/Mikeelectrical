@@ -21,6 +21,6 @@
     "**/*.tsx",
     "src/componants/Marquee/card.js",
     "src/componants/Marquee/card.js"
-  ],
+, "src/componants/utils/utils.js"  ],
   "exclude": ["node_modules"]
 }

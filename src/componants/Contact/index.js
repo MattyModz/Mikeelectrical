@@ -3,12 +3,18 @@ import axios from "axios";
 import { useState } from "react";
 import { motion } from "framer-motion";
 import Submit from "./submit";
+// import { Button } from "../ui/Button,js";
+import { toast } from "react-hot-toast";
 // import Image from "next/image";
 const Contact = () => {
   const { register, handleSubmit } = useForm();
   const [formStatus, setFormStatus] = useState(false);
-  async function onSubmitForm(values, event) {
+  const [loading, setLoading] = useState(false);
+
+  const onSubmitForm = async (values, event) => {
     event.preventDefault();
+    setLoading(true);
+
     const config = {
       method: "post",
       url: `${process.env.NEXT_PUBLIC_API_URL}/api/mail`,
@@ -21,14 +27,25 @@ const Contact = () => {
     try {
       const response = await axios(config);
 
-      if (response.status == 200) {
+      if (response.status === 200) {
         setFormStatus(true);
+        toast.success("Message Sent Successfully");
+      } else {
+        // Handle other status codes if needed
+        console.error("Unexpected response status:", response.status);
       }
-    } catch (err) {}
-  }
+    } catch (error) {
+      // Handle request error
+      console.error("Error during API request:", error.message);
+      toast.error("Something went wrong, please try again");
+    } finally {
+      setLoading(false);
+    }
+  };
 
   return (
     <div className="py-8">
+      {/* <button onClick={notify}>onclick</button> */}
       <motion.section
         className="w-full  bg-white "
         initial={{ opacity: 0, y: 40 }}
@@ -98,11 +115,26 @@ const Contact = () => {
                     ></textarea>
                   </div>
 
-                  <button
+                  {/* <Button
                     type="submit"
                     className="sm:col-span-2 inline-block px-8 py-3 text-sm font-semibold text-center text-white transition duration-100 rounded-md outline-none bg-blue-400 md:text-base"
                   >
                     Submit
+                  </Button> */}
+                  <button
+                    type="submit"
+                    className={`relative flex items-center justify-center sm:col-span-2 inline-flex px-8 py-3 text-sm font-semibold text-center text-white transition duration-100 rounded-md outline-none bg-blue-400 md:text-base ${
+                      loading ? "opacity-50 cursor-not-allowed" : ""
+                    }`}
+                    onClick={handleSubmit}
+                    disabled={loading}
+                  >
+                    {loading && (
+                      <span className="mr-2">
+                        <div className="spinner"></div>
+                      </span>
+                    )}
+                    {loading ? "Submitting..." : "Submit"}
                   </button>
                 </form>
               </div>
