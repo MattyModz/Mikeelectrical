@@ -1,21 +1,21 @@
-import nodemailer from "nodemailer";
+// import nodemailer from "nodemailer";
 
-const transporter = nodemailer.createTransport({
-  host: "smtp-mail.outlook.com",
-  secure: false,
-  port: 587,
-  auth: {
-    user: "mikewire@hotmail.com",
-    pass: "20Birleystreet!",
-  },
-  requireTLS: true,
-  tls: {
-    ciphers: "SSLv3",
-    rejectUnauthorized: false,
-  },
-  debug: true,
-  logger: true,
-});
+// const transporter = nodemailer.createTransport({
+//   host: "smtp-mail.outlook.com",
+//   secure: false,
+//   port: 587,
+//   auth: {
+//     user: "mikewire@hotmail.com",
+//     pass: "20Birleystreet!",
+//   },
+//   requireTLS: true,
+//   tls: {
+//     ciphers: "SSLv3",
+//     rejectUnauthorized: false,
+//   },
+//   debug: true,
+//   logger: true,
+// });
 
 export default async function handler(req, res) {
   const { fullName, Message, SenderEmail } = req.body;
