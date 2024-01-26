@@ -44,7 +44,7 @@ function Post({ data, preview }) {
   return (
     <section className="mb-8 bg-gray-50">
       <div className=" flex justify-center  ">
-        <main className="p-5 mx-auto  text-black container max-w-5xl ">
+        <main className=" mx-auto  text-black max-w-screen-3xl ">
           <article className="container ">
             <motion.div
               className=""

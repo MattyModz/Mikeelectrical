@@ -5,14 +5,12 @@ import { ChevronRightIcon } from "@heroicons/react/solid";
 import PortableText from "react-portable-text";
 function Faq({ data }) {
   return (
-    <section className="h-full bg-body-dark pb-16 container max-w-5xl">
+    <section className="h-full bg-body-dark pb-16  ">
       <div className="text-center">
-        <h1 className="text-blue-400 font-boold lg:text-6xl text-5xl font-bold ">
+        <h1 className="text-blue-400 font-boold lg:text-6xl text-5xl font-bold pb-4 ">
           FAQ&apos;S
         </h1>
-        <p className="text-white py-2 text-3xl">
-          Take a look at our most frequently asked questions!
-        </p>
+
         {data.map((d) => (
           <div key={d.quesiton} className="">
             <div className="w-full px-4 ">
