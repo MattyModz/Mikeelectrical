@@ -2,7 +2,7 @@ import { useRouter } from "next/router";
 import { Fragment } from "react";
 import { Popover, Transition } from "@headlessui/react";
 import Link from "next/link";
-import { NavLink } from "./navlink";
+// import { NavLink } from "./navlink";
 import Image from "next/image";
 import {
   BookmarkAltIcon,

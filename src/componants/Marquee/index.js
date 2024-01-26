@@ -9,8 +9,8 @@ export default function Reviews({ reviews }) {
           <div className="text-white flex justify-center mb-4"> </div>
         </div>
 
-        <Marquee gradient={false}>
-          <div className="flex px-5">
+        <Marquee gradient={false} speed={25}>
+          <div className="flex space-x-20">
             {reviews.map((review) => {
               return (
                 <Reviewcard

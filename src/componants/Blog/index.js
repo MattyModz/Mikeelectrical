@@ -14,6 +14,7 @@ export default function Blogcard({ posts }) {
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0, transition: { duration: 1 } }}
               viewport={{ once: true }}
+              key={index}
             >
               <div className="">
                 <Link
@@ -61,43 +62,45 @@ export default function Blogcard({ posts }) {
               </div>
             </motion.div>
           ) : (
-            <motion.div
-              className="w-full  py-12"
-              initial={{ opacity: 0, y: 40 }}
-              whileInView={{
-                opacity: 1,
-                y: 0,
-                transition: { duration: 1, delay: index * 0.1 },
-              }}
-              viewport={{ once: true }}
-            >
-              <Link key={post._id} href={`/post/${post.slug.current}`} passHref>
-                <Image
-                  src={urlFor(post.mainImage).url()}
-                  alt=""
-                  width={500}
-                  height={500}
-                  className="flex rounded-t-xl mb-4"
-                />
-              </Link>
-              <div className="bg-purple-500  items-center px-3  py-1.5 leading-none rounded-full text-xs font-medium uppercase text-white inline-block">
-                <span>Lifestyle</span>
-              </div>
-              <h2 className="text-lg font-bold sm:text-xl md:text-2xl">
-                <Link
-                  key={post._id}
-                  href={`/post/${post.slug.current}`}
-                  passHref
-                >
-                  {post.title}
-                </Link>
-              </h2>
-              <p className="text-sm text-gray-500">{post.description}</p>
-              <p className="pt-2 text-xs font-medium">
-                {post.author.name}· <span className="mx-1">April 17, 2021</span>{" "}
-                · <span className="mx-1 text-gray-600">3 min. read</span>
-              </p>
-            </motion.div>
+            // <motion.div
+            //   key={int}
+            //   className="w-full  py-12"
+            //   initial={{ opacity: 0, y: 40 }}
+            //   whileInView={{
+            //     opacity: 1,
+            //     y: 0,
+            //     transition: { duration: 1, delay: index * 0.1 },
+            //   }}
+            //   viewport={{ once: true }}
+            // >
+            //   <Link key={post._id} href={`/post/${post.slug.current}`} passHref>
+            //     <Image
+            //       src={urlFor(post.mainImage).url()}
+            //       alt=""
+            //       width={500}
+            //       height={500}
+            //       className="flex rounded-t-xl mb-4"
+            //     />
+            //   </Link>
+            //   <div className="bg-purple-500  items-center px-3  py-1.5 leading-none rounded-full text-xs font-medium uppercase text-white inline-block">
+            //     <span>Lifestyle</span>
+            //   </div>
+            //   <h2 className="text-lg font-bold sm:text-xl md:text-2xl">
+            //     <Link
+            //       key={post._id}
+            //       href={`/post/${post.slug.current}`}
+            //       passHref
+            //     >
+            //       {post.title}
+            //     </Link>
+            //   </h2>
+            //   <p className="text-sm text-gray-500">{post.description}</p>
+            //   <p className="pt-2 text-xs font-medium">
+            //     {post.author.name}· <span className="mx-1">April 17, 2021</span>{" "}
+            //     · <span className="mx-1 text-gray-600">3 min. read</span>
+            //   </p>
+            // </motion.div>
+            <></>
           )
         )}
       </div>
