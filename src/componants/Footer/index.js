@@ -5,13 +5,8 @@ function Footer() {
   return (
     <div className="box-border px-4 mx-auto border-solid md:px-6 lg:px-8 max-w-7xl tails-selected-element">
       <div className="relative flex flex-col items-center justify-between leading-7 text-gray-900 border-0 border-gray-200 md:flex-row md:items-center">
-        <a
-          href="#"
-          title=""
-          className="flex rounded outline-none focus:ring-1 focus:ring-gray-900 focus:ring-offset-2"
-        >
-          <Image width={150} height={75} src="/logo.svg" alt="" />
-        </a>
+        <Image width={150} height={75} src="/logo.svg" alt="" />
+
         <ul className="box-border flex mx-auto my-6 space-x-6">
           <li className="relative mt-2 leading-7 text-left text-gray-900 border-0 border-gray-200 md:border-b-0 md:mt-0">
             <Link

@@ -87,9 +87,9 @@ export function PrimaryFeatures({
             all electrical engineering capacitys, contact us, we&apos;d love to
             discuss how we can help you.
           </p>
-          <div className="flex justify-center p-6 mt-4  bg-gray-50/20 rounded-xl">
+          <div className="flex justify-center p-2 mt-4 space-x-4 bg-gray-50/20 rounded-xl">
             <Image src={"/IPAF.png"} width={150} height={75} />
-            <Image src={"/Nic cert.svg"} width={150} height={75} />
+            <Image src={"/Niccert.svg"} width={150} height={75} />
           </div>
         </div>
 

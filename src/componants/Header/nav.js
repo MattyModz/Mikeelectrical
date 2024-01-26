@@ -78,7 +78,7 @@ export default function Example() {
 
   return (
     <Popover className="scroll-smooth  text-black  z-90" style={Z_INDEX}>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 py-4">
         <div className="flex justify-between items-center  py-2 md:justify-start md:space-x-10">
           <div className="flex justify-start lg:w-0 lg:flex-1">
             <Link href="/">
@@ -93,11 +93,12 @@ export default function Example() {
           </div>
 
           <div as="nav" className="hidden md:flex space-x-10 items-center ">
-            <span className=" m:hidden blackspace-nowrap inline-flex items-center justify-center px-4 py-2 rounded-md shadow-sm text-base font-medium text-black  hover:bg-blue-600 hover:text-white mr-2">
-              <NavLink className="scroll-smooth" href="#services">
-                Services
-              </NavLink>
-            </span>
+            <a
+              href="#services"
+              className=" m:hidden blackspace-nowrap inline-flex items-center justify-center px-4 py-2 rounded-md shadow-sm text-base font-medium text-black  hover:bg-blue-600 hover:text-white mr-2 "
+            >
+              Services
+            </a>
 
             <a
               href="#about"

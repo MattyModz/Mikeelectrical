@@ -20,7 +20,9 @@
     "**/*.ts",
     "**/*.tsx",
     "src/componants/Marquee/card.js",
-    "src/componants/Marquee/card.js"
-, "src/componants/utils/utils.js"  ],
+    "src/componants/Marquee/card.js",
+    "src/componants/utils/utils.js",
+    "app/layout.js"
+  ],
   "exclude": ["node_modules"]
 }

@@ -6,11 +6,6 @@
   background-color: #f9fafb;
 }
 
-img {
-  height: 100%;
-  width: 100%;
-}
-
 .track {
   --size: clamp(200px, 40vmin, 50rem);
   height: var(--size);
@@ -40,6 +35,7 @@ img {
 .track__item {
   height: 100%;
   aspect-ratio: 1;
+  padding-bottom: 18px;
 
   /*background: var(--surface-2);*/
   scroll-snap-align: center;

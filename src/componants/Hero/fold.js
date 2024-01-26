@@ -8,20 +8,17 @@ function Fold() {
           className="hidden sm:absolute sm:inset-y-0 sm:block sm:h-full sm:w-full"
           aria-hidden="true"
         >
-          <div className="relative mx-auto h-full max-w-7xl"></div>
+          <div className="relative mx-auto h-full max-w-screen-2xl"></div>
         </div>
-
         <div className="relative pb-6  ">
-          <main className="mx-auto  max-w-7xl px-4 sm:mt-16">
-            <div className="flex justify-center ">
-              {" "}
-              <div className="flex justify-center    bg-gray-50/20 rounded-xl">
-                <Image src={"/IPAF.png"} width={100} height={50} />
-                <Image src={"/logoicon.svg"} width={100} height={50} />
-                <Image src={"/Nic cert.svg"} width={100} height={50} />
+          <main className="mx-auto  max-w-7xl px-4 sm:mt-14">
+            <div className="text-center   ">
+              <div className="flex justify-center lg:mb-0 pb-4 lg:space-x-8 space-x-6  rounded-xl">
+                <Image src={"/IPAF.png"} width={90} height={50} className="" />
+
+                <Image src={"/logoicon.svg"} width={50} height={50} />
+                <Image src={"/Nic cert.jpg"} width={100} height={50} />
               </div>
-            </div>
-            <div className="text-center py-4">
               <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl md:text-6xl">
                 <span className="block xl:inline">
                   Leading Electrical contractor
